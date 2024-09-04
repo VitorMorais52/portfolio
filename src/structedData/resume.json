@@ -1,0 +1,124 @@
+{
+  "resume": {
+    "content": {
+      "personalInformation": {
+        "name": "João Vitor Saturnino de Morais",
+        "occupation": "Full Stack Developer",
+        "languages": [
+          { "name": "Portuguese", "level": "Fluent" },
+          { "name": "English", "level": "Intermediate" },
+          { "name": "Japanese", "level": "Beginner" },
+          { "name": "Spanish", "level": "Beginner" }
+        ],
+        "about": "Enthusiastic about technology and its continuous advancement, always learning more about the new features and tools that have been appearing, but also improving myself in what I already work on.",
+        "address": {
+          "street": "Alameda Acrópole",
+          "number": "680",
+          "neighbourhood": "Santa Edwiges",
+          "cep": "17067-540",
+          "city": "Bauru",
+          "state": "São Paulo",
+          "country": "Brasil"
+        },
+        "contact": {
+          "email": "vitormorais52@gmail.com",
+          "phone": "+5514998242242"
+        },
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/joaovitormorais/?locale=en_US",
+          "github": "https://github.com/VitorMorais52",
+          "rocketseat": "https://app.rocketseat.com.br/me/joaovitormorais"
+        }
+      },
+      "workExperience": [
+        {
+          "company": "Code 49",
+          "address": {
+            "city": "Bauru",
+            "state0": "São Paulo",
+            "country": "Brasil"
+          },
+          "occupation": "Full Stack Developer",
+          "date": {
+            "start": { "month": "September", "year": "2020" },
+            "end": { "month": "September", "year": "2021" }
+          },
+          "product": "CRM and Real Estate websites",
+          "about": "Technologies and resources used: PHP, JavaScript, VueJS, Laravel, NodeJS, MariaDB, Docker, Git/GitLab and Discord."
+        },
+        {
+          "company": "Softable",
+          "address": {
+            "city": "São Carlos",
+            "state0": "São Paulo",
+            "country": "Brasil"
+          },
+          "occupation": "Frontend Developer",
+          "date": {
+            "start": { "month": "September", "year": "2021" },
+            "end": { "month": "January", "year": "2022" }
+          },
+          "product": "ERP",
+          "about": "Technologies and resources used: ReactJS, NextJS, Typescript, Figma, Jira, Bitbucket and Slack."
+        },
+        {
+          "company": "UOL",
+          "address": {
+            "city": "São Paulo",
+            "state0": "São Paulo",
+            "country": "Brasil"
+          },
+          "occupation": "Frontend Developer",
+          "date": {
+            "start": { "month": "May", "year": "2022" },
+            "end": null
+          },
+          "product": "Realtime Chat",
+          "about": "Technologies and resources used: ReactJS, NextJS,  Typescript, Adobe XD, Atlassian resources and Teams."
+        }
+      ],
+      "education": {
+        "degreeOfAssociate": [
+          {
+            "title": "Associate's Degree in IT",
+            "institution": {
+              "name": "Colégio Técnico Industrial - Isaac Portal Roldan - UNESP Bauru",
+              "city": "Bauru",
+              "state": "São Paulo",
+              "country": "Brasil"
+            },
+            "date": {
+              "start": { "month": "February", "year": "2016" },
+              "end": { "month": "December", "year": "2018" }
+            },
+            "skills": [
+              "Programming Logic, MVC Pattern, OOP",
+              "C/C++, PHP, C#, JAVA, JavaScript",
+              "Arduíno, Linux"
+            ]
+          }
+        ],
+        "technical": [],
+        "college": null
+      },
+      "skills": {
+        "soft": {},
+        "hard": {
+          "Technologies": {
+            "frontend": [
+              {
+                "name": "JavaScript",
+                "libraries": ["ReactJS", "VueJS", "JQuery"],
+                "frameworks": ["NextJS"]
+              }
+            ],
+            "backend": [
+              { "name": "PHP", "libraries": ["Laravel"], "frameworks": [] }
+            ],
+            "database": []
+          }
+        }
+      }
+    }
+  }
+}
