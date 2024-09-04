@@ -1,10 +1,13 @@
 import Image from "next/image";
 
 import bgInstitutional from "../../../public/bg-institutional-2.png";
-import meProfile from "../../../public/me-profile.png";
-import meEvo from "../../../public/me-evo.png";
-import mePorto from "../../../public/me-porto.png";
-import { WrittenLogo } from "../_components/icons";
+
+import {
+  WrittenLogo,
+  GithubLogoWhite,
+  RocketseatLogo,
+  LinkedinLogo,
+} from "../_components/icons";
 
 export default function Institutional() {
   return (
@@ -46,7 +49,7 @@ export default function Institutional() {
         </ul>
       </div>
       <div className="flex flex-col items-center content-center">
-        <h1 className="font-bold text-[22px]">
+        <h1 className="font-bold text-[26px]">
           Who{" "}
           <span className="relative mx-[1px]">
             we are
@@ -56,8 +59,7 @@ export default function Institutional() {
         </h1>
         <Image
           alt="Mountains"
-          src={meProfile}
-          placeholder="blur"
+          src="/me-profile.png"
           quality={100}
           width="151"
           height="180"
@@ -75,8 +77,7 @@ export default function Institutional() {
         <div className="flex">
           <Image
             alt="Mountains"
-            src={meEvo}
-            placeholder="blur"
+            src="/me-evo.png"
             quality={100}
             width="258"
             height="282"
@@ -98,8 +99,7 @@ export default function Institutional() {
               </p>
               <Image
                 alt="Mountains"
-                src={mePorto}
-                placeholder="blur"
+                src="/me-porto.png"
                 quality={100}
                 width="225"
                 height="282"
@@ -110,7 +110,7 @@ export default function Institutional() {
         </div>
       </div>
       <div className="flex flex-col items-center content-center mt-[128px]">
-        <h1 className="font-bold text-[22px]">Portfolio</h1>
+        <h1 className="font-bold text-[26px]">Portfolio</h1>
         <div className="flex items-end">
           <p className=" max-w-[282px] text-center text-[16px] mt-[20px]">
             Dude, this is my portfolio!{" "}
@@ -122,18 +122,24 @@ export default function Institutional() {
         <p className="max-w-[222px] text-center text-[16px]">Enjoy it.</p>
       </div>
       <div className="flex flex-col items-center content-center mt-[128px] w-full">
-        <h1 className="font-bold text-[22px]">Contact me</h1>
+        <h1 className="font-bold text-[26px]">Contact me</h1>
         <div className="mr-auto mt-[32px]">
           <p className="text-[20px]">João Morais</p>
-          <p>located in Bauru, Brazil</p>
           <p>vitormorais52@gmail.com</p>
         </div>
-        <div className="mr-auto">
+        <div className="mr-auto mt-6">
           <p className="text-[20px]">Links</p>
-          <div className="flex">
-            <span>LinkedIn</span>
-            <span>Github</span>
-            <span>Rocketseat</span>
+          <div className="flex gap-6 mt-1">
+            <span className="flex items-end gap-[8px]">
+              <LinkedinLogo classes="w-[26px] h-[26px]" />
+              LinkedIn
+            </span>
+            <span className="flex items-end gap-[8px]">
+              <GithubLogoWhite classes="w-[26px] h-[26px]" /> Github
+            </span>
+            <span className="flex items-end gap-[8px]">
+              <RocketseatLogo classes="w-[26px] h-[26px]" /> Rocketseat
+            </span>
           </div>
         </div>
       </div>
