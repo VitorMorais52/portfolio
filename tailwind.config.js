@@ -4,17 +4,22 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      keyframes: {
+        rotateY: {
+          "0%": { transform: "rotateY(0deg)" },
+          "100%": { transform: "rotateY(360deg)" },
+        },
+      },
+      animation: {
+        "rotateY-once": "rotateY 2s ease-in-out 1s forwards", // 2s delay, 2s duration, no repeat
+      },
       screens: {
         "2xl": "1600px", // Novo breakpoint
       },
-      // Outras extensões, como cores, espaçamentos, etc.
     },
   },
-  plugins: [],
 };

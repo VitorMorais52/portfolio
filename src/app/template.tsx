@@ -77,9 +77,12 @@ const Header = ({ pagesGuide, underlinePosition }: HeaderProps) => (
     id="headbar"
     className="w-[1280px] flex items-center justify-between px-4 mx-auto mt-24 relative 2xl:mt-16"
   >
-    <div className="absolute left-0">
+    <Link
+      href={pagesGuide.home.path}
+      className="absolute left-0 animate-rotateY-once"
+    >
       <Logo />
-    </div>
+    </Link>
     <nav id="navbarContainer" className="mr-auto ml-auto relative">
       <ul className="flex">
         {Object.entries(pagesGuide).map(([name, pageInfo]) => (
@@ -92,9 +95,9 @@ const Header = ({ pagesGuide, underlinePosition }: HeaderProps) => (
       </ul>
       <Underline position={underlinePosition} />
     </nav>
-    <div className="absolute right-0">
+    <button className="absolute right-0">
       <Burguer />
-    </div>
+    </button>
   </header>
 );
 

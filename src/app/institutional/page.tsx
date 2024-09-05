@@ -8,6 +8,7 @@ import {
   RocketseatLogo,
   LinkedinLogo,
 } from "../_components/icons";
+import Link from "next/link";
 
 export default function Institutional() {
   return (
@@ -27,6 +28,7 @@ export default function Institutional() {
         />
       </div>
       <div
+        id="Home"
         className="absolute flex flex-col ml-auto mr-auto"
         style={{ color: "white" }}
       >
@@ -42,13 +44,21 @@ export default function Institutional() {
           </span>
         </div>
         <ul className="gap-4 px-4 py-[14px] ml-auto mr-auto flex border-2 border-solid border-[#585858] rounded-[12px] text-[#E7E7E7]">
-          <li>Home</li>
-          <li>Who we are</li>
-          <li>Portfolio</li>
-          <li>Contact me</li>
+          <li>
+            <Link href="#Home">Home</Link>
+          </li>
+          <li>
+            <Link href="#WhoWeAre">Who we are</Link>
+          </li>
+          <li>
+            <Link href="#Portfolio">Portfolio</Link>
+          </li>
+          <li>
+            <Link href="#ContactMe">Contact me</Link>
+          </li>
         </ul>
       </div>
-      <div className="flex flex-col items-center content-center">
+      <div id="WhoWeAre" className="flex flex-col items-center content-center">
         <h1 className="font-bold text-[26px]">
           Who{" "}
           <span className="relative mx-[1px]">
@@ -109,7 +119,10 @@ export default function Institutional() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center content-center mt-[128px]">
+      <div
+        id="Portfolio"
+        className="flex flex-col items-center content-center mt-[128px]"
+      >
         <h1 className="font-bold text-[26px]">Portfolio</h1>
         <div className="flex items-end">
           <p className=" max-w-[282px] text-center text-[16px] mt-[20px]">
@@ -121,7 +134,10 @@ export default function Institutional() {
         </div>
         <p className="max-w-[222px] text-center text-[16px]">Enjoy it.</p>
       </div>
-      <div className="flex flex-col items-center content-center mt-[128px] w-full">
+      <div
+        id="ContactMe"
+        className="flex flex-col items-center content-center mt-[128px] w-full"
+      >
         <h1 className="font-bold text-[26px]">Contact me</h1>
         <div className="mr-auto mt-[32px]">
           <p className="text-[20px]">João Morais</p>
@@ -130,16 +146,31 @@ export default function Institutional() {
         <div className="mr-auto mt-6">
           <p className="text-[20px]">Links</p>
           <div className="flex gap-6 mt-1">
-            <span className="flex items-end gap-[8px]">
-              <LinkedinLogo classes="w-[26px] h-[26px]" />
+            <Link
+              href="https://www.linkedin.com/in/joaovitormorais/"
+              target="_blank"
+              rel="noreferrer"
+              className="flex gap-[8px]"
+            >
+              <LinkedinLogo classes="w-[22px] h-[22px]" />
               LinkedIn
-            </span>
-            <span className="flex items-end gap-[8px]">
-              <GithubLogoWhite classes="w-[26px] h-[26px]" /> Github
-            </span>
-            <span className="flex items-end gap-[8px]">
-              <RocketseatLogo classes="w-[26px] h-[26px]" /> Rocketseat
-            </span>
+            </Link>
+            <Link
+              href="https://github.com/VitorMorais52"
+              target="_blank"
+              rel="noreferrer"
+              className="flex gap-[8px]"
+            >
+              <GithubLogoWhite classes="w-[22px] h-[22px]" /> Github
+            </Link>
+            <Link
+              href="https://app.rocketseat.com.br/me/joaovitormorais"
+              target="_blank"
+              rel="noreferrer"
+              className="flex gap-[8px]"
+            >
+              <RocketseatLogo classes="w-[22px] h-[22px]" /> Rocketseat
+            </Link>
           </div>
         </div>
       </div>
