@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export default function Institutional() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between max-w-7xl mx-auto">
+    <main className="flex min-h-screen flex-col items-center justify-between max-w-7xl mx-auto mb-[72px]">
       <div className="h-screen w-screen overflow-hidden -z-10">
         <Image
           alt="Mountains"

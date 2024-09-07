@@ -63,6 +63,11 @@ export default function Template({ children }: { children: React.ReactNode }) {
     <div className="overflow-x-hidden mb-[60px]">
       <Header pagesGuide={pagesGuide} underlinePosition={currentItemPosition} />
       {children}
+      <footer>
+        <p className="m-auto text-center">
+          &copy; 2024 Morais Tech. Todos os direitos reservados.
+        </p>
+      </footer>
     </div>
   );
 }
@@ -77,10 +82,7 @@ const Header = ({ pagesGuide, underlinePosition }: HeaderProps) => (
     id="headbar"
     className="w-[1280px] flex items-center justify-between px-4 mx-auto mt-24 relative 2xl:mt-16"
   >
-    <Link
-      href={pagesGuide.home.path}
-      className="absolute left-0 animate-rotateY-once"
-    >
+    <Link href={pagesGuide.home.path} className="absolute left-0">
       <Logo />
     </Link>
     <nav id="navbarContainer" className="mr-auto ml-auto relative">
