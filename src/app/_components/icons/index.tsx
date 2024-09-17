@@ -5,6 +5,7 @@ import GithubLogo from "./githubLogo";
 import GithubLogoWhite from "./githubLogoWhite";
 import RocketseatLogo from "./rocketseatLogo";
 import LinkedinLogo from "./linkedinLogo";
+import Star from "./star";
 
 export {
   Logo,
@@ -14,4 +15,5 @@ export {
   GithubLogoWhite,
   RocketseatLogo,
   LinkedinLogo,
+  Star,
 };
