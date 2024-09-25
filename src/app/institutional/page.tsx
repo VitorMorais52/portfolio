@@ -1,6 +1,8 @@
 import Image from "next/image";
 
-import bgInstitutional from "../../../public/bg-institutional-2.png";
+import { Suspense } from "react";
+
+import bgInstitutional from "../../../public/bg-institutional-2.webp";
 
 import {
   WrittenLogo,
@@ -14,18 +16,20 @@ export default function Institutional() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between max-w-7xl mx-auto mb-[72px]">
       <div className="h-screen w-screen overflow-hidden -z-10">
-        <Image
-          alt="Mountains"
-          src={bgInstitutional}
-          placeholder="blur"
-          quality={100}
-          fill
-          sizes="100vw"
-          style={{
-            objectFit: "cover",
-            opacity: "0.8",
-          }}
-        />
+        <Suspense>
+          <Image
+            alt="Mountains"
+            src={bgInstitutional}
+            placeholder="blur"
+            quality={100}
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+              opacity: "0.8",
+            }}
+          />
+        </Suspense>
       </div>
       <div
         id="Home"
@@ -69,7 +73,7 @@ export default function Institutional() {
         </h1>
         <Image
           alt="Mountains"
-          src="/me-profile.png"
+          src="/me-profile.webp"
           quality={100}
           width="151"
           height="180"
@@ -87,7 +91,7 @@ export default function Institutional() {
         <div className="flex">
           <Image
             alt="Mountains"
-            src="/me-evo.png"
+            src="/me-evo.webp"
             quality={100}
             width="258"
             height="282"
@@ -109,7 +113,7 @@ export default function Institutional() {
               </p>
               <Image
                 alt="Mountains"
-                src="/me-porto.png"
+                src="/me-porto.webp"
                 quality={100}
                 width="225"
                 height="282"

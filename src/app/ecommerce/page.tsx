@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { Suspense } from "react";
 
-import bgInstitutional from "../../../public/bg-ecommerce.png";
+import bgInstitutional from "../../../public/bg-ecommerce.webp";
 
 import { WrittenLogo, Star } from "../_components/icons";
 
@@ -8,18 +9,20 @@ export default function Ecommerce() {
   return (
     <main className="flex flex-col items-center min-h-screen mx-auto mb-[72px]">
       <div className="h-[427px] w-screen overflow-hidden -z-10">
-        <Image
-          alt="Mountains"
-          src={bgInstitutional}
-          placeholder="blur"
-          quality={100}
-          fill
-          style={{
-            objectFit: "cover",
-            opacity: "0.8",
-            maxHeight: "427px",
-          }}
-        />
+        <Suspense>
+          <Image
+            alt="Mountains"
+            src={bgInstitutional}
+            placeholder="blur"
+            quality={100}
+            fill
+            style={{
+              objectFit: "cover",
+              opacity: "0.8",
+              maxHeight: "427px",
+            }}
+          />
+        </Suspense>
       </div>
       <div
         id="Home"
