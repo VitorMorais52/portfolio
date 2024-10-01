@@ -1,3 +1,15 @@
+import {
+  Bricks,
+  Screen,
+  Database,
+  Git,
+  Tools,
+  Design,
+  Message,
+  Management,
+  Styling,
+} from "./_components/icons";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center max-w-7xl mx-auto mb-[72px]">
@@ -12,40 +24,71 @@ export default function Home() {
         <h2 className="text-center text-[18px]">What do I have to offer?</h2>
         <div className="mt-[42px] mx-8 mb-8 w-full justify-items-start grid gap-8 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
           <section className="flex flex-col w-fit">
-            <h3>I have the base stack</h3>
-            <p className="font-extralight">HTML, CSS and JavaScript</p>
+            <h3 className="flex">
+              <Bricks className="mr-2" /> I have the base stack
+            </h3>
+            <p className="font-extralight">HTML, CSS and JavaScript.</p>
           </section>
           <section className="flex flex-col w-fit">
-            <h3>The popular</h3>
+            <h3 className="flex">
+              <Screen className="mr-2" /> The popular
+            </h3>
             <p className="font-extralight">
-              ReactJS, NextJS, VueJS, TypeScript
+              ReactJS, NextJS, VueJS and TypeScript.
             </p>
           </section>
           <section className="flex flex-col w-fit">
-            <h3>I’ve already worked as Backend Developer using</h3>
+            <h3 className="flex">
+              <Styling className="mr-2" /> For styling
+            </h3>
             <p className="font-extralight">
-              NodeJS, PHP and Laravel, MariaDB and Docker
+              Styled-components, Sass and Bootstrap.
             </p>
           </section>
           <section className="flex flex-col w-fit">
-            <h3>For version control</h3>
-            <p className="font-extralight">Git, GitLab, GitHub and Bitbucket</p>
+            <h3 className="flex">
+              <Database className="mr-2" /> I’ve already worked as Backend
+              Developer using
+            </h3>
+            <p className="font-extralight">
+              NodeJS, PHP and Laravel, MariaDB and Docker.
+            </p>
           </section>
           <section className="flex flex-col w-fit">
-            <h3>The tools I&apos;m familiar with</h3>
-            <p className="font-extralight">NodeJS, PHP and Laravel, MariaDB</p>
+            <h3 className="flex">
+              <Git className="mr-2" /> For version control
+            </h3>
+            <p className="font-extralight">
+              Git, GitLab, GitHub and Bitbucket.
+            </p>
           </section>
           <section className="flex flex-col w-fit">
-            <h3>For layout design</h3>
-            <p className="font-extralight">Figma and Adobe XD</p>
+            <h3 className="flex">
+              <Design className="mr-2" /> For layout design
+            </h3>
+            <p className="font-extralight">Figma and Adobe XD.</p>
           </section>
           <section className="flex flex-col w-fit">
-            <h3>Communication platforms </h3>
-            <p className="font-extralight">Teams, Slack and Discord</p>
+            <h3 className="flex">
+              <Tools className="mr-2" /> The tools I&apos;m familiar with
+            </h3>
+            <p className="font-extralight">
+              Google Tag Manager, Google Analytics and Atlassian resources.
+            </p>
           </section>
           <section className="flex flex-col w-fit">
-            <h3>Favorite agile methodologies</h3>
-            <p className="font-extralight">Scrum and Kanban</p>
+            <h3 className="flex">
+              <Message className="mr-2" />
+              Communication platforms
+            </h3>
+            <p className="font-extralight">Teams, Slack and Discord.</p>
+          </section>
+          <section className="flex flex-col w-fit">
+            <h3 className="flex">
+              <Management className="mr-2" />
+              Favorite agile methodologies
+            </h3>
+            <p className="font-extralight">Scrum and Kanban.</p>
           </section>
         </div>
       </section>
@@ -71,7 +114,10 @@ export default function Home() {
           I like to be responsible with my work and I think that consistency is
           more important than intensity.
         </p>
-        <p className="font-extralight text-center">
+        <p
+          className="mt-[42px] font-extralight text-center"
+          style={{ fontWeight: "100", opacity: "0.5" }}
+        >
           Don&apos;t tell me what you want, tell me what you&apos;ve been doing.
         </p>
       </section>
