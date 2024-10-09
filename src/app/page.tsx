@@ -13,16 +13,16 @@ import {
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center max-w-7xl mx-auto mb-[72px]">
-      <section className="flex flex-col">
+      <section id="introducing" className="flex flex-col px-4">
         <h1 className="mt-[86px] text-[24px]">I&apos;m a Frontend Developer</h1>
         <span className="font-extralight text-[14px] text-center">
           Who are you?
         </span>
       </section>
 
-      <section className="w-full mt-[86px]">
+      <section id="hard-skills" className="w-full mt-[86px] px-4">
         <h2 className="text-center text-[18px]">What do I have to offer?</h2>
-        <div className="mt-[42px] mx-8 mb-8 w-full justify-items-start grid gap-8 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+        <div className="mt-8 mb-8 w-full justify-items-start grid gap-8 grid-cols-[repeat(auto-fit,minmax(300px,auto))]">
           <section className="flex flex-col w-fit">
             <h3 className="flex">
               <Bricks className="mr-2" /> I have the base stack
@@ -93,14 +93,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-[42px]">
+      <section id="product-types" className="mt-[42px] px-4">
         <h2 className="text-center">What products have I worked on?</h2>
         <p className="mt-2 font-extralight text-center">
           CRM, ERP, Institutional Pages, Landing Pages and a Realtime Chat
         </p>
       </section>
 
-      <section>
+      <section id="about-me" className="w-full mt-[86px] px-4">
         <h2 className="text-center">About me</h2>
         <p className="mt-2 font-extralight text-center">
           My name is João Morais, I’m a Brazilian Developer and I’ve been
@@ -110,17 +110,17 @@ export default function Home() {
           I believe that a good work environment is based on good and clear
           communication. Technical skills alone are not enough.
         </p>
-        <p className="font-extralight text-center">
-          I like to be responsible with my work and I think that consistency is
-          more important than intensity.
-        </p>
-        <p
-          className="mt-[42px] font-extralight text-center"
-          style={{ fontWeight: "100", opacity: "0.5" }}
-        >
-          Don&apos;t tell me what you want, tell me what you&apos;ve been doing.
-        </p>
       </section>
+
+      {/* <section id="projects" className="w-full mt-[86px]">
+        <h2 className="text-center text-[18px]">Projects</h2>
+        <div>
+          <section id="project-card"></section>
+          <section id="project-card"></section>
+          <section id="project-card"></section>
+          <section id="project-card"></section>
+        </div>
+      </section> */}
     </main>
   );
 }

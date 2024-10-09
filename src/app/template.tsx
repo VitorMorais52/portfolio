@@ -21,9 +21,8 @@ export default function Template({ children }: { children: React.ReactNode }) {
       <Header />
       {children}
       <footer>
-        <p className="m-auto text-center">
-          &copy; 2024 Morais Tech. Todos os direitos reservados.
-        </p>
+        <p className="m-auto text-center">&copy; 2024 Morais Tech.</p>{" "}
+        <p className="m-auto text-center">Todos os direitos reservados.</p>
       </footer>
     </div>
   );
