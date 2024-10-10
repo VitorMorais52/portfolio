@@ -51,13 +51,16 @@ const Header = () => {
   return (
     <header
       id="headbar"
-      className="w-[1280px] flex items-center justify-between px-4 mx-auto mt-24 relative 2xl:mt-16"
+      className="xl:w-[1280px] xl:mx-auto mx-4 flex items-center justify-between px-4 mt-12 sm:mt-24 relative 2xl:mt-16"
     >
       <Link href={pagesGuide.home.path} className="absolute left-0">
         <Logo />
       </Link>
-      <nav id="navbarContainer" className="mr-auto ml-auto relative">
-        <ul className="flex">
+      <nav
+        id="navbarContainer"
+        className="mt-4 sm:mt-0 mr-auto ml-auto relative"
+      >
+        <ul className="hidden sm:flex">
           {Object.entries(pagesGuide).map(([name, pageInfo]) => (
             <li id={name} key={name} className="relative">
               <Link href={pageInfo.path} className="capitalize px-2">
