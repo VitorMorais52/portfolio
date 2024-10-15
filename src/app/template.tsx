@@ -6,27 +6,7 @@ import { useMemo } from "react";
 
 import { Logo, Burguer } from "./_components/icons/";
 
-type PageGuideType = {
-  path: string;
-  underlineSize: string;
-};
-
-interface PagesGuide {
-  [key: string]: PageGuideType;
-}
-
-export default function Template({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="overflow-x-hidden mb-[60px]">
-      <Header />
-      {children}
-      <footer>
-        <p className="m-auto text-center">&copy; 2024 Morais Tech.</p>{" "}
-        <p className="m-auto text-center">Todos os direitos reservados.</p>
-      </footer>
-    </div>
-  );
-}
+const pagesName = ["home", "blog", "institutional", "ecommerce", "resume"];
 
 const Header = () => {
   const pathname = usePathname();
@@ -37,23 +17,12 @@ const Header = () => {
     return match ? match[1] : "home";
   }, [pathname]);
 
-  const pagesGuide: PagesGuide = useMemo(
-    () => ({
-      home: { path: "/", underlineSize: "60px" },
-      blog: { path: "/blog", underlineSize: "60px" },
-      institutional: { path: "/institutional", underlineSize: "60px" },
-      ecommerce: { path: "/ecommerce", underlineSize: "60px" },
-      resume: { path: "/resume", underlineSize: "60px" },
-    }),
-    []
-  );
-
   return (
     <header
       id="headbar"
       className="xl:w-[1280px] xl:mx-auto mx-4 flex items-center justify-between px-4 mt-12 sm:mt-24 relative 2xl:mt-16"
     >
-      <Link href={pagesGuide.home.path} className="absolute left-0">
+      <Link href="\" className="absolute left-0">
         <Logo />
       </Link>
       <nav
@@ -61,9 +30,9 @@ const Header = () => {
         className="mt-4 sm:mt-0 mr-auto ml-auto relative"
       >
         <ul className="hidden sm:flex">
-          {Object.entries(pagesGuide).map(([name, pageInfo]) => (
+          {pagesName.map((name) => (
             <li id={name} key={name} className="relative">
-              <Link href={pageInfo.path} className="capitalize px-2">
+              <Link href={`\\${name}`} className="capitalize px-2">
                 {name}
               </Link>
               {currentPage === name && <Underline />}
@@ -87,3 +56,43 @@ const Underline = () => (
     }}
   />
 );
+
+const Navigation = () => {
+  return (
+    <section
+      id="navigation"
+      className="border-t-[1px] border-t-[#111111] mt-[84px] mb-[42px]"
+    >
+      <ul className="mt-4 w-full px-2 justify-center justify-items-center grid gap-6 grid-cols-[repeat(auto-fit,minmax(min-content,90px))] sm:flex w-fit mx-auto">
+        {pagesName.map((name) => (
+          <li key={name} className="flex w-fit">
+            <a>{name}</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
+
+export default function Template({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="overflow-x-hidden mb-8">
+      <Header />
+      {children}
+      <footer>
+        <Navigation />
+        <section
+          id="rights-reserved"
+          className="sm:w-fit sm:flex sm:mx-auto sm:gap-4"
+        >
+          <p className="m-auto text-center sm:m-0 sm:w-fit">
+            &copy; 2024 Morais Tech.
+          </p>{" "}
+          <p className="m-auto text-center sm:m-0 sm:w-fit">
+            All rights reserved.
+          </p>
+        </section>
+      </footer>
+    </div>
+  );
+}
