@@ -66,11 +66,23 @@ const Menu = () => {
       <div
         ref={menuRef}
         id="menu"
-        className="fixed 2xl:absolute flex w-[300px] h-[100vh] bg-black top-[-16px] right-[-16px] transform translate-x-full opacity-0 transition-all duration-500 ease-in-out"
+        className="fixed 2xl:absolute flex flex-col w-[300px] h-[100vh] bg-black top-[-16px] right-[-16px] transform translate-x-full opacity-0 transition-all duration-500 ease-in-out"
       >
-        <button className="flex mt-28 2xl:mt-4 ml-4" onClick={toggleMenu}>
+        <button
+          className="flex mt-16 sm:mt-28 2xl:mt-4 ml-4"
+          onClick={toggleMenu}
+        >
           <Burguer />
         </button>
+        <nav id="navigation" className="mt-8 ml-4">
+          <ul className="flex flex-col gap-4">
+            {pagesName.map((name) => (
+              <li key={name} className="flex w-fit">
+                <a>{name}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </div>
   );
@@ -88,7 +100,7 @@ const Underline = () => (
 
 const Navigation = () => {
   return (
-    <section
+    <nav
       id="navigation"
       className="border-t-[1px] border-t-[#111111] mt-[84px] mb-[42px]"
     >
@@ -99,7 +111,7 @@ const Navigation = () => {
           </li>
         ))}
       </ul>
-    </section>
+    </nav>
   );
 };
 
