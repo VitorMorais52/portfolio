@@ -66,9 +66,9 @@ const Menu = () => {
       <div
         ref={menuRef}
         id="menu"
-        className="fixed flex w-[300px] h-[100vh] bg-black top-[-16px] right-[-16px] transform translate-x-full opacity-0 transition-all duration-500 ease-in-out"
+        className="fixed 2xl:absolute flex w-[300px] h-[100vh] bg-black top-[-16px] right-[-16px] transform translate-x-full opacity-0 transition-all duration-500 ease-in-out"
       >
-        <button className="flex mt-8 ml-4" onClick={toggleMenu}>
+        <button className="flex mt-28 2xl:mt-4 ml-4" onClick={toggleMenu}>
           <Burguer />
         </button>
       </div>
