@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { Burguer } from "../icons/";
+import Link from "next/link";
 
 interface MenuProps {
   currentPage: string;
@@ -16,12 +17,33 @@ const Menu = ({ currentPage, pagesName }: MenuProps) => {
   const stylesByPage: Record<string, string> = {
     home: forBlackBG,
     blog: forBlackBG,
-    resume: forNotBlackBG,
+    resume: forBlackBG,
     institutional: forNotBlackBG,
     ecommerce: forNotBlackBG,
   };
 
+  const disableScroll = () => {
+    window.addEventListener("scroll", preventScroll, { passive: false });
+    window.addEventListener("wheel", preventScroll, { passive: false });
+    window.addEventListener("touchmove", preventScroll, { passive: false });
+  };
+
+  // Função para desbloquear o scroll
+  const enableScroll = () => {
+    window.removeEventListener("scroll", preventScroll);
+    window.removeEventListener("wheel", preventScroll);
+    window.removeEventListener("touchmove", preventScroll);
+  };
+
+  const preventScroll = (e: Event) => {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  };
+
   const toggleMenu = () => {
+    // document.body.classList.toggle("overflow-hidden");
+
     if (menuRef.current) {
       menuRef.current.classList.toggle("translate-x-full");
       menuRef.current.classList.toggle("translate-x-0");
@@ -66,7 +88,9 @@ const Menu = ({ currentPage, pagesName }: MenuProps) => {
           <ul className="flex flex-col gap-4">
             {pagesName.map((name) => (
               <li key={name} className="flex w-fit">
-                <a>{name}</a>
+                <Link href={`\\${name}`} className="capitalize px-2">
+                  {name}
+                </Link>
               </li>
             ))}
           </ul>
