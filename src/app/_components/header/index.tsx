@@ -34,7 +34,7 @@ const Header = ({ currentPage }: HeaderProps) => {
           ))}
         </ul>
       </nav>
-      <Menu currentPage={currentPage} pagesName={pagesName} />
+      <Menu pagesName={pagesName} />
     </header>
   );
 };
