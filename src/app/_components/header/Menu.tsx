@@ -9,6 +9,7 @@ interface MenuProps {
 const Menu = ({ pagesName }: MenuProps) => {
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonMenuRef = useRef<HTMLButtonElement>(null);
+  const overlayMenuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     if (menuRef.current) {
@@ -17,6 +18,12 @@ const Menu = ({ pagesName }: MenuProps) => {
 
       menuRef.current.classList.toggle("opacity-0");
       menuRef.current.classList.toggle("opacity-100");
+    }
+
+    if (overlayMenuRef.current) {
+      overlayMenuRef.current.classList.toggle("fixed");
+      overlayMenuRef.current.classList.toggle("opacity-50");
+      overlayMenuRef.current.classList.toggle("opacity-0");
     }
 
     if (buttonMenuRef.current) {
@@ -29,7 +36,7 @@ const Menu = ({ pagesName }: MenuProps) => {
   };
 
   return (
-    <div id="menu-container">
+    <div id="menu-container" className="">
       <button
         className="absolute top-0 right-0 transform translate-x-0 opacity-100 transition-all duration-500 ease-in-out"
         onClick={toggleMenu}
@@ -37,6 +44,12 @@ const Menu = ({ pagesName }: MenuProps) => {
       >
         <Burguer />
       </button>
+      <div
+        ref={overlayMenuRef}
+        id="menu-overlay"
+        onClick={toggleMenu}
+        className="bg-black opacity-0 top-0 bottom-0 left-0 right-0 transition-all duration-500"
+      />
       <div
         ref={menuRef}
         id="menu"
