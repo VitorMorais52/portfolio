@@ -1,7 +1,7 @@
 export default function Blog() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between max-w-7xl mx-auto mb-[72px]">
-      <article className="flex w-full justify-between mt-[72px] bg-[#242323] rounded-[4px] p-4">
+    <main className="mx-4 flex min-h-screen flex-col items-center justify-between max-w-7xl xl:mx-auto mb-[72px]">
+      <article className="justify-between flex w-full mt-[72px] bg-[#242323] rounded-[4px] p-4">
         <div>
           <header>
             <p className="text-[14px] text-[#B0B0B0]">
@@ -24,10 +24,13 @@ export default function Blog() {
         </div>
         <div className="my-auto w-[180px] h-[180px] bg-[#161616] rounded-[4px]" />
       </article>
-      <section className="flex flex-col w-full items-center justify-center mt-8">
-        <h2 className="text-[24px] font-bold">Best Skills</h2>
-        <div className="flex float w-full flex-wrap items-center justify-between">
-          <article className="flex justify-between mt-8 bg-[#242323] rounded-[4px] p-4 min-w-[464px] max-w-[624px]">
+      <section
+        id="best-skills-sections"
+        className="flex flex-col w-full items-center justify-center mt-8"
+      >
+        <h2 className="text-[24px] font-bold mb-8 xl:mb-0">Best Skills</h2>
+        <div className="gap-4 justify-center xl:justify-between flex float w-full flex-wrap items-center">
+          <article className="w-full md:max-w-[354px] lg:max-w-[464px] xl:max-w-[624px] flex justify-between xl:mt-8 bg-[#242323] rounded-[4px] p-4">
             <div>
               <header>
                 <p className="text-[14px] text-[#B0B0B0]">
@@ -49,7 +52,7 @@ export default function Blog() {
             </div>
             <div className="my-auto w-[140px] h-[140px] bg-[#161616] rounded-[4px]" />
           </article>
-          <article className="flex justify-between mt-8 bg-[#242323] rounded-[4px] p-4 min-w-[464px] max-w-[624px]">
+          <article className="w-full md:max-w-[354px] lg:max-w-[464px] xl:max-w-[624px] flex justify-between xl:mt-8 bg-[#242323] rounded-[4px] p-4">
             <div>
               <header>
                 <p className="text-[14px] text-[#B0B0B0]">
@@ -71,7 +74,7 @@ export default function Blog() {
             </div>
             <div className="my-auto w-[140px] h-[140px] bg-[#161616] rounded-[4px]" />
           </article>
-          <article className="flex justify-between mt-8 bg-[#242323] rounded-[4px] p-4 min-w-[464px] max-w-[624px]">
+          <article className="w-full md:max-w-[354px] lg:max-w-[464px] xl:max-w-[624px] flex justify-between xl:mt-8 bg-[#242323] rounded-[4px] p-4 ">
             <div>
               <header>
                 <p className="text-[14px] text-[#B0B0B0]">
@@ -93,7 +96,7 @@ export default function Blog() {
             </div>
             <div className="my-auto w-[140px] h-[140px] bg-[#161616] rounded-[4px]" />
           </article>
-          <article className="flex justify-between mt-8 bg-[#242323] rounded-[4px] p-4 min-w-[464px] max-w-[624px]">
+          <article className="w-full md:max-w-[354px] lg:max-w-[464px] xl:max-w-[624px] flex justify-between xl:mt-8 bg-[#242323] rounded-[4px] p-4 ">
             <div>
               <header>
                 <p className="text-[14px] text-[#B0B0B0]">
@@ -117,10 +120,13 @@ export default function Blog() {
           </article>
         </div>
       </section>
-      <section className="flex flex-col w-full items-center justify-center mt-8">
+      <section
+        id="experiences-sections"
+        className="flex flex-col w-full items-center justify-center mt-8"
+      >
         <h2 className="text-[24px] font-bold">Experiences</h2>
-        <div className="flex float w-full flex-wrap items-center justify-between">
-          <article className="flex justify-between mt-8 bg-[#242323] rounded-[4px] p-4 min-w-[464px] max-w-[624px]">
+        <div className="justify-center xl:justify-between flex float gap-4 w-full flex-wrap items-center">
+          <article className="w-full md:max-w-[354px] lg:max-w-[464px] xl:max-w-[624px] flex justify-between mt-8 bg-[#242323] rounded-[4px] p-4">
             <div>
               <header>
                 <p className="text-[14px] text-[#B0B0B0]">
@@ -142,7 +148,7 @@ export default function Blog() {
             </div>
             <div className="my-auto w-[140px] h-[140px] bg-[#161616] rounded-[4px]" />
           </article>
-          <article className="flex justify-between mt-8 bg-[#242323] rounded-[4px] p-4 min-w-[464px] max-w-[624px]">
+          <article className="w-full md:max-w-[354px] lg:max-w-[464px] xl:max-w-[624px] flex justify-between mt-8 bg-[#242323] rounded-[4px] p-4">
             <div>
               <header>
                 <p className="text-[14px] text-[#B0B0B0]">
@@ -164,7 +170,7 @@ export default function Blog() {
             </div>
             <div className="my-auto w-[140px] h-[140px] bg-[#161616] rounded-[4px]" />
           </article>
-          <article className="flex justify-between mt-8 bg-[#242323] rounded-[4px] p-4 min-w-[464px] max-w-[624px]">
+          <article className="w-full md:max-w-[354px] lg:max-w-[464px] xl:max-w-[624px] flex justify-between mt-8 bg-[#242323] rounded-[4px] p-4">
             <div>
               <header>
                 <p className="text-[14px] text-[#B0B0B0]">
@@ -186,7 +192,7 @@ export default function Blog() {
             </div>
             <div className="my-auto w-[140px] h-[140px] bg-[#161616] rounded-[4px]" />
           </article>
-          <article className="flex justify-between mt-8 bg-[#242323] rounded-[4px] p-4 min-w-[464px] max-w-[624px]">
+          <article className="w-full md:max-w-[354px] lg:max-w-[464px] xl:max-w-[624px] flex justify-between mt-8 bg-[#242323] rounded-[4px] p-4">
             <div>
               <header>
                 <p className="text-[14px] text-[#B0B0B0]">
