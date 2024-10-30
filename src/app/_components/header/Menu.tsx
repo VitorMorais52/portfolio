@@ -24,6 +24,7 @@ const Menu = ({ pagesName }: MenuProps) => {
       overlayMenuRef.current.classList.toggle("fixed");
       overlayMenuRef.current.classList.toggle("opacity-50");
       overlayMenuRef.current.classList.toggle("opacity-0");
+      overlayMenuRef.current.classList.toggle("contrast-[0.95]");
     }
 
     if (buttonMenuRef.current) {
@@ -53,10 +54,10 @@ const Menu = ({ pagesName }: MenuProps) => {
       <div
         ref={menuRef}
         id="menu"
-        className={`z-10 h-screen fixed pt-1 2xl:pt-16 flex flex-col w-[300px] h-[100vh] bg-black top-[-16px] right-[-16px] transform translate-x-full opacity-0 transition-all duration-500 ease-in-out`}
+        className={`z-10 h-screen fixed pt-1 2xl:pt-16 flex flex-col w-[240px] sm:w-[300px] h-[100vh] bg-black top-0 right-[-16px] transform translate-x-full opacity-0 transition-all duration-500 ease-in-out`}
       >
         <button
-          className="flex mt-16 sm:mt-28 2xl:mt-4 ml-4"
+          className="flex mt-[44px] sm:mt-[92px] 2xl:mt-0 ml-4"
           onClick={toggleMenu}
         >
           <Burguer />
