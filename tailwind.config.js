@@ -18,7 +18,8 @@ module.exports = {
         "rotateY-once": "rotateY 2s ease-in-out 1s forwards", // 2s delay, 2s duration, no repeat
       },
       screens: {
-        "2xl": "1600px", // Novo breakpoint
+        "xs": "360px", 
+        "2xl": "1600px", 
       },
     },
   },
