@@ -62,7 +62,7 @@ const Menu = ({ pagesName }: MenuProps) => {
         >
           <Burguer />
         </button>
-        <nav id="navigation" className="mt-8 ml-4">
+        <nav id="navigation" className="mt-8 ml-2">
           <ul className="flex flex-col gap-4">
             {pagesName.map((name) => (
               <li key={name} className="flex w-fit">
