@@ -15,7 +15,10 @@ import Link from "next/link";
 export default function Institutional() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between max-w-7xl mx-auto mb-[72px]">
-      <div className="h-screen w-screen overflow-hidden -z-10">
+      <div
+        id="wrapper-bg-img"
+        className="h-screen w-screen overflow-hidden -z-10"
+      >
         <Suspense>
           <Image
             alt="Mountains"
@@ -31,25 +34,31 @@ export default function Institutional() {
           />
         </Suspense>
       </div>
-      <div
-        id="Home"
+      <section
+        id="Introduction"
         className="absolute flex flex-col ml-auto mr-auto"
         style={{ color: "white" }}
       >
-        <div className="mt-[64px] mb-[106px] ml-auto mr-auto">
+        <div
+          id="container-logo"
+          className="mt-[64px] mb-[106px] ml-auto mr-auto"
+        >
           <WrittenLogo />
         </div>
-        <div className="flex flex-col ml-auto mr-auto mb-[150px] text-[#E7E7E7]">
-          <span className="ml-auto mr-auto text-[34px]">
+        <div
+          id="title"
+          className="max-w-[96%] flex flex-col ml-auto mr-auto mb-[150px] text-center text-[#E7E7E7]"
+        >
+          <span className="text-[34px] ml-auto mr-auto w-fit">
             More than one developer
           </span>
-          <span className="ml-auto mr-auto text-[32px]">
+          <span className="text-[32px] ml-auto mr-auto">
             less than two developers
           </span>
         </div>
-        <ul className="gap-4 px-4 py-[14px] ml-auto mr-auto flex border-2 border-solid border-[#585858] rounded-[12px] text-[#E7E7E7]">
+        <ul className="text-xs xs:text-sm sm:text-base gap-4 px-4 py-[14px] ml-auto mr-auto flex border-2 border-solid border-[#585858] rounded-[12px] text-[#E7E7E7]">
           <li>
-            <Link href="#Home">Home</Link>
+            <Link href="#Introduction">Home</Link>
           </li>
           <li>
             <Link href="#WhoWeAre">Who we are</Link>
@@ -61,8 +70,11 @@ export default function Institutional() {
             <Link href="#ContactMe">Contact me</Link>
           </li>
         </ul>
-      </div>
-      <div id="WhoWeAre" className="flex flex-col items-center content-center">
+      </section>
+      <section
+        id="WhoWeAre"
+        className="px-4 lg:mx-0 flex flex-col items-center content-center"
+      >
         <h1 className="font-bold text-[26px]">
           Who{" "}
           <span className="relative mx-[1px]">
@@ -83,29 +95,29 @@ export default function Institutional() {
           className="mt-[32px] mb-[25px]"
         />
         <h2>About me</h2>
-        <p className="mt-[18px] mb-[18px] text-justify">
+        <p className="mt-[18px] mb-4 text-justify">
           Enthusiastic about technology and its continuous advancement, always
           learning more about the new features and tools that have been
           appearing, but also improving myself in what I already work on
         </p>
-        <div className="flex">
+        <div className="flex justify-center flex-col md:flex-row">
           <Image
             alt="Mountains"
             src="/me-evo.webp"
             quality={100}
             width="258"
             height="282"
-            className="mr-auto max-h-[282px]"
+            className="mt-2 md:mt-0 mx-auto md:mr-auto h-[282px] lg:max-h-[282px]"
           />
           <div>
-            <p className="ml-[24px] mb-[24px] text-justify">
+            <p className="mt-6 md:mt-0 md:ml-[24px] mb-[24px] text-justify">
               Enthusiastic about technology and its continuous advancement,
               always learning more about the new features and tools that have
               been appearing, but also improving myself in what I already work
               on
             </p>
-            <div className="flex">
-              <p className="mx-[24px] text-justify">
+            <div className="flex justify-center flex-col md:flex-row">
+              <p className="md:mx-[24px] text-justify">
                 Enthusiastic about technology and its continuous advancement,
                 always learning more about the new features and tools that have
                 been appearing, but also improving myself in what I already work
@@ -117,13 +129,13 @@ export default function Institutional() {
                 quality={100}
                 width="225"
                 height="282"
-                className="ml-auto mt-[-24px] max-h-[282px]"
+                className="mt-6 md:mt-[-8px] mx-auto md:ml-auto h-[282px] max-h-[282px]"
               />
             </div>
           </div>
         </div>
-      </div>
-      <div
+      </section>
+      <section
         id="Portfolio"
         className="flex flex-col items-center content-center mt-[128px]"
       >
@@ -137,10 +149,10 @@ export default function Institutional() {
           </p>
         </div>
         <p className="max-w-[222px] text-center text-[16px]">Enjoy it.</p>
-      </div>
-      <div
+      </section>
+      <section
         id="ContactMe"
-        className="flex flex-col items-center content-center mt-[128px] w-full"
+        className="px-4 flex flex-col items-center content-center mt-[128px] w-full"
       >
         <h1 className="font-bold text-[26px]">Contact me</h1>
         <div className="mr-auto mt-[32px]">
@@ -149,7 +161,7 @@ export default function Institutional() {
         </div>
         <div className="mr-auto mt-6">
           <p className="text-[20px]">Links</p>
-          <div className="flex gap-6 mt-1">
+          <div className="flex flex-wrap gap-6 mt-1">
             <Link
               href="https://www.linkedin.com/in/joaovitormorais/"
               target="_blank"
@@ -177,7 +189,7 @@ export default function Institutional() {
             </Link>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
