@@ -3,7 +3,8 @@ import { Suspense } from "react";
 
 import bgInstitutional from "../../../public/bg-ecommerce.webp";
 
-import { WrittenLogo, Star } from "../_components/icons";
+import { WrittenLogo } from "../_components/icons";
+import Filters from "./Filters";
 
 export default function Ecommerce() {
   return (
@@ -37,45 +38,28 @@ export default function Ecommerce() {
 
           <input
             type="text"
-            placeholder="🔍 Search"
+            placeholder="Search"
             className="mt-6 border-2 border-solid border-[#585858] rounded-[12px] text-[#E7E7E7] bg-transparent p-1 pl-2"
           ></input>
         </div>
       </div>
       <div id="container" className="relative flex mt-[-6rem] w-full">
-        <section
-          id="leftBar"
-          className="w-[340px] bg-[#0C0C0C] flex flex-col items-start"
-        >
-          <h2 className="mt-4 mx-auto mb-[42px]">Filters</h2>
-
-          <section id="reviews" className="pl-6">
-            <h3>Reviews</h3>
-            <div className="flex mt-1 ml-[-2px]">
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-            </div>
-          </section>
-          <section id="sides"></section>
-        </section>
+        <Filters />
         <section id="mainContent" className="flex bg-[#161616] w-[100%] ">
           <section
             id="products"
-            className="mt-16 mx-8 mb-8 w-full justify-items-center grid gap-8 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]"
+            className="mt-16 xs:px-8 mb-8 w-full justify-items-center grid gap-8 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]"
           >
-            <div className="w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
-            <div className="w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
-            <div className="w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
-            <div className="w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
-            <div className="w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
-            <div className="w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
-            <div className="w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
-            <div className="w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
-            <div className="w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
-            <div className="w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
+            <div className="w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
+            <div className="w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
+            <div className="w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
+            <div className="w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
+            <div className="w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
+            <div className="w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
+            <div className="w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
+            <div className="w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
+            <div className="w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
+            <div className="w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]" />
           </section>
         </section>
       </div>
