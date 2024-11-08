@@ -19,7 +19,8 @@ export default function Filters() {
       <button
         type="button"
         onClick={toggleFilters}
-        className="absolute top-4 left-12 z-10 text-lg"
+        style={{ zIndex: "1" }}
+        className="absolute top-4 left-12 text-lg"
       >
         Filters
       </button>

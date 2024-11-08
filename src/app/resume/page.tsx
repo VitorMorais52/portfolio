@@ -8,7 +8,7 @@ import {
 export default function Resume() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between max-w-7xl mx-auto">
-      <div className="flex flex-col w-[850px] border border-solid border-[#8B8B8B] my-[72px] bg-[#1A1A1A] px-[34px]  pb-[84px]">
+      <div className="mx-4 sm:my-[72px] mt-16 pb-12 sm:pb-[84px] px-4 sm:px-[34px] lg:w-[850px] flex flex-col border border-solid border-[#8B8B8B] bg-[#1A1A1A]">
         <h1 className="mx-auto mt-[84px] text-[26px]">
           Frontend Web Developer
         </h1>
@@ -19,7 +19,7 @@ export default function Resume() {
             <a href="mailto:vitormorais52@gmail.com">vitormorais52@gmail.com</a>
           </p>
         </section>
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
           <section id="leftContent" className="max-w-[560px] mt-8">
             <section id="aboutMe">
               <h2 className="text-[20px]">About me</h2>
