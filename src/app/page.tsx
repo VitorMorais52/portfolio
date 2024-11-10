@@ -96,7 +96,7 @@ export default function Home() {
       <section id="product-types" className="mt-[42px] px-4">
         <h2 className="text-center">What products have I worked on?</h2>
         <p className="mt-2 font-extralight text-center">
-          CRM, ERP, Institutional Pages, Landing Pages and a Realtime Chat
+          CRM, ERP, Institutional Pages, Landing Pages and a Realtime Chat.
         </p>
       </section>
 
