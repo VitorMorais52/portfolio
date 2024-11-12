@@ -96,9 +96,10 @@ export default function Institutional() {
         />
         <h2>About me</h2>
         <p className="mt-[18px] mb-4 text-justify">
-          Enthusiastic about technology and its continuous advancement, always
-          learning more about the new features and tools that have been
-          appearing, but also improving myself in what I already work on
+          My name is João Morais, and I’m a Brazilian developer. I’ve been
+          working in development for over 4 years. Since 2016, I’ve been
+          studying and striving to discover my best version both as a
+          professional and as a person.
         </p>
         <div className="flex justify-center flex-col md:flex-row">
           <Image
@@ -111,17 +112,15 @@ export default function Institutional() {
           />
           <div>
             <p className="mt-6 md:mt-0 md:ml-[24px] mb-[24px] text-justify">
-              Enthusiastic about technology and its continuous advancement,
-              always learning more about the new features and tools that have
-              been appearing, but also improving myself in what I already work
-              on
+              I have Associate’s Degree since 2018 and I got my first job as
+              Software Developer in 2020. Since then, I’ve been conquering for
+              experience with various technologies, but having my core skills
+              with JavaScript based technologies like ReactJS, NextJS and VueJS.
             </p>
             <div className="flex justify-center flex-col md:flex-row">
               <p className="md:mx-[24px] text-justify">
-                Enthusiastic about technology and its continuous advancement,
-                always learning more about the new features and tools that have
-                been appearing, but also improving myself in what I already work
-                on
+                We are humans, not code or machines. Humanized work is
+                important. “I am because we are”.
               </p>
               <Image
                 alt="Mountains"

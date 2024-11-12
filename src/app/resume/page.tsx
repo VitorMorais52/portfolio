@@ -15,8 +15,9 @@ export default function Resume() {
         <section id="personalInfo" className="w-auto mt-8">
           <h2 className="text-[20px]">João Morais</h2>{" "}
           <p className="font-extralight">
-            Email:{" "}
-            <a href="mailto:vitormorais52@gmail.com">vitormorais52@gmail.com</a>
+            <a aria-label="email" href="mailto:vitormorais52@gmail.com">
+              vitormorais52@gmail.com
+            </a>
           </p>
         </section>
         <div className="flex flex-col md:flex-row justify-between">
@@ -27,7 +28,7 @@ export default function Resume() {
                 Enthusiastic about technology and its continuous advancement,
                 always learning more about the new features and tools that have
                 been appearing, but also improving myself in what I already work
-                on
+                on.
               </p>
             </section>
             <section id="professionalBackground" className="mt-8">
