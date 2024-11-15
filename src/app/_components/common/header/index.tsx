@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Underline from "./Underline";
 import Menu from "./Menu";
-import { Logo } from "../icons/";
+import { Logo } from "../icons";
 
 interface HeaderProps {
   currentPage: string;

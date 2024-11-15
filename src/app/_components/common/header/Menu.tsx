@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Burguer } from "../icons/";
+import { Burguer } from "../icons";
 import Link from "next/link";
 
 interface MenuProps {

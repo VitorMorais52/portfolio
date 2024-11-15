@@ -1,11 +1,11 @@
-import Chat from "../_components/icons/blog/chat";
-import Screen from "../_components/icons/blog/screen";
-import FolderScreen from "../_components/icons/blog/folderScreen";
-import CleanCode from "../_components/icons/blog/cleanCode";
-import CodeRand from "../_components/icons/blog/codeRand";
-import CodeOptimization from "../_components/icons/blog/codeOptimization";
-import Me from "../_components/icons/blog/me";
-import Avatar from "../_components/avatar";
+import Chat from "../_components/common/icons/blog/chat";
+import Screen from "../_components/common/icons/blog/screen";
+import FolderScreen from "../_components/common/icons/blog/folderScreen";
+import CleanCode from "../_components/common/icons/blog/cleanCode";
+import CodeRand from "../_components/common/icons/blog/codeRand";
+import CodeOptimization from "../_components/common/icons/blog/codeOptimization";
+import Me from "../_components/common/icons/blog/me";
+import Avatar from "../_components/common/avatar";
 
 export default function Blog() {
   return (

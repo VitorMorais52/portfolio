@@ -9,7 +9,7 @@ import {
   GithubLogoWhite,
   RocketseatLogo,
   LinkedinLogo,
-} from "../_components/icons";
+} from "../_components/common/icons";
 import Link from "next/link";
 
 export default function Institutional() {

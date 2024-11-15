@@ -3,23 +3,23 @@ import { Suspense } from "react";
 
 import bgInstitutional from "../../../public/bg-ecommerce.webp";
 
-import IconReactJS from "../_components/icons/ecommerce/reactjs";
-import IconJavascript from "../_components/icons/ecommerce/javascript";
-import IconTypescript from "../_components/icons/ecommerce/typescript";
-import IconVueJS from "../_components/icons/ecommerce/vuejs";
-import IconNextJS from "../_components/icons/ecommerce/nextjs";
-import IconNodeJS from "../_components/icons/ecommerce/nodejs";
-import IconHTML5 from "../_components/icons/ecommerce/html5";
-import IconPHP from "../_components/icons/ecommerce/php";
+import IconReactJS from "../_components/common/icons/ecommerce/reactjs";
+import IconJavascript from "../_components/common/icons/ecommerce/javascript";
+import IconTypescript from "../_components/common/icons/ecommerce/typescript";
+import IconVueJS from "../_components/common/icons/ecommerce/vuejs";
+import IconNextJS from "../_components/common/icons/ecommerce/nextjs";
+import IconNodeJS from "../_components/common/icons/ecommerce/nodejs";
+import IconHTML5 from "../_components/common/icons/ecommerce/html5";
+import IconPHP from "../_components/common/icons/ecommerce/php";
 
-import IconCSS from "../_components/icons/ecommerce/css";
-import IconDocker from "../_components/icons/ecommerce/docker";
-import IconFigma from "../_components/icons/ecommerce/figma";
-import IconMariaDB from "../_components/icons/ecommerce/mariadb";
-import IconSass from "../_components/icons/ecommerce/sass";
-import IconStyledComponents from "../_components/icons/ecommerce/styledComponents";
-import IconTailwind from "../_components/icons/ecommerce/tailwind";
-import { WrittenLogo } from "../_components/icons";
+import IconCSS from "../_components/common/icons/ecommerce/css";
+import IconDocker from "../_components/common/icons/ecommerce/docker";
+import IconFigma from "../_components/common/icons/ecommerce/figma";
+import IconMariaDB from "../_components/common/icons/ecommerce/mariadb";
+import IconSass from "../_components/common/icons/ecommerce/sass";
+import IconStyledComponents from "../_components/common/icons/ecommerce/styledComponents";
+import IconTailwind from "../_components/common/icons/ecommerce/tailwind";
+import { WrittenLogo } from "../_components/common/icons";
 
 import Filters from "./Filters";
 
@@ -42,10 +42,10 @@ import Filters from "./Filters";
 
 //Git / Github / Gitlab / Bitbucket
 
-import IconGit from "../_components/icons/ecommerce/git";
-import IconGithub from "../_components/icons/ecommerce/github";
-import IconGitlab from "../_components/icons/ecommerce/gitlab";
-import IconBitbucket from "../_components/icons/ecommerce/bitbucket";
+import IconGit from "../_components/common/icons/ecommerce/git";
+import IconGithub from "../_components/common/icons/ecommerce/github";
+import IconGitlab from "../_components/common/icons/ecommerce/gitlab";
+import IconBitbucket from "../_components/common/icons/ecommerce/bitbucket";
 
 export default function Ecommerce() {
   return (

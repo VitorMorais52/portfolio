@@ -8,7 +8,7 @@ import {
   Message,
   Management,
   Styling,
-} from "./_components/icons";
+} from "./_components/common/icons";
 
 export default function Home() {
   return (

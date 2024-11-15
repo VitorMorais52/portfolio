@@ -1,6 +1,6 @@
 "use client";
 import { useRef } from "react";
-import { Star } from "../_components/icons";
+import { Star } from "../_components/common/icons";
 
 export default function Filters() {
   const filtersRef = useRef<HTMLDivElement>(null);
@@ -20,7 +20,7 @@ export default function Filters() {
         type="button"
         onClick={toggleFilters}
         style={{ zIndex: "1" }}
-        className="absolute top-4 left-12 text-lg"
+        className="absolute top-4 left-[2.5rem] text-lg"
       >
         Filters
       </button>

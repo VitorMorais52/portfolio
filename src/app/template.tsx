@@ -3,8 +3,8 @@
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 
-import Header from "./_components/header";
-import Footer from "./_components/footer";
+import Header from "./_components/common/header";
+import Footer from "./_components/common/footer";
 
 const pagesName = ["home", "blog", "institutional", "ecommerce", "resume"];
 

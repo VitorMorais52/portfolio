@@ -3,7 +3,7 @@ import {
   GithubLogoWhite,
   LinkedinLogo,
   RocketseatLogo,
-} from "../_components/icons";
+} from "../_components/common/icons";
 
 export default function Resume() {
   return (
