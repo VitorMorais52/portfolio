@@ -41,7 +41,7 @@ export default function Post({ post }: PostProps) {
 
   const DynamicIcon = async ({ iconName }: DynamicIconProps) => {
     const ImportedIcon = dynamic<IconProps>(
-      () => import(`./icons/${iconName.toLowerCase()}.tsx`),
+      () => import(`./icons/${iconName}.tsx`),
       {
         loading: () => <p>Loading...</p>,
       }

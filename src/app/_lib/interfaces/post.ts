@@ -10,4 +10,8 @@ export interface IPost {
   readingMinutes: number;
 }
 
-export type IPosts = IPost[];
+export interface IPosts {
+  highlighted: IPost[];
+  bestSkills: IPost[];
+  experiences: IPost[];
+}
