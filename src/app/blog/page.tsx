@@ -1,39 +1,38 @@
-import Chat from "../_components/common/icons/blog/chat";
-import Screen from "../_components/common/icons/blog/screen";
-import FolderScreen from "../_components/common/icons/blog/folderScreen";
-import CleanCode from "../_components/common/icons/blog/cleanCode";
-import CodeRand from "../_components/common/icons/blog/codeRand";
-import CodeOptimization from "../_components/common/icons/blog/codeOptimization";
-import Me from "../_components/common/icons/blog/me";
+import Chat from "../_components/pages/blog/icons/chat";
+import Screen from "../_components/pages/blog/icons/screen";
+import FolderScreen from "../_components/pages/blog/icons/folderScreen";
+import CleanCode from "../_components/pages/blog/icons/cleanCode";
+import CodeRand from "../_components/pages/blog/icons/codeRand";
+import CodeOptimization from "../_components/pages/blog/icons/codeOptimization";
+import Me from "../_components/pages/blog/icons/me";
 import Avatar from "../_components/common/avatar";
+import { posts } from "../_lib/services/posts";
+import { IPosts } from "../_lib/interfaces/post";
+import Post from "../_components/pages/blog/post";
+
+interface FilteredPosts {
+  common: IPosts;
+  highlighted: IPosts;
+}
 
 export default function Blog() {
+  const filteredPosts: FilteredPosts = posts.reduce(
+    (previousPosts, post) => {
+      if (post?.highlighted) {
+        previousPosts.highlighted.push(post);
+      } else {
+        previousPosts.common.push(post);
+      }
+      return previousPosts;
+    },
+    { highlighted: [] as IPosts, common: [] as IPosts }
+  );
+
   return (
     <main className="mx-4 flex min-h-screen flex-col items-center max-w-7xl xl:mx-auto mb-[72px]">
-      <article className="flex flex-col items-center sm:flex-row w-full justify-between mt-[72px] bg-[#242323] rounded-[4px] p-4">
-        <div className="w-full sm:w-[68%] xl:w-[84%]">
-          <header>
-            <p className="text-[14px] text-[#B0B0B0]">
-              <time dateTime="2023-09-06">Nov 8, 2024</time>
-              <span className="ml-4">1 min read</span>
-            </p>
-            <h2 className="text-[18px] mt-4 mb-2">About me</h2>
-          </header>
-          <p className="line-clamp-6 xs:line-clamp-2 overflow-hidden text-ellipsis mb-4">
-            My name is João Morais, I’m a Brazilian Developer and I’ve been
-            working with development for over 4 years.
-          </p>
-          <footer className="flex mb-[12px]">
-            <p className="flex items-center">
-              <Avatar alt="author photo" className="w-[40px] h-[40px]" />
-              <span className="ml-2">João Morais</span>
-            </p>
-          </footer>
-        </div>
-        <div className="flex justify-center items-center my-auto w-[14%] min-w-[180px] aspect-square bg-[#161616] rounded-[4px]">
-          <Me className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-        </div>
-      </article>
+      {filteredPosts.highlighted.map((post) => (
+        <Post key={post.title} post={post} />
+      ))}
       <section
         id="best-skills-sections"
         className="flex flex-col w-full items-center justify-center mt-8"

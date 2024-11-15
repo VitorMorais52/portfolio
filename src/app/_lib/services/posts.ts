@@ -1,6 +1,6 @@
-import { Posts } from "../interfaces/post";
+import { IPosts } from "../interfaces/post";
 
-export const posts: Posts = [
+export const posts: IPosts = [
   {
     title: "About me",
     author: "João Morais",

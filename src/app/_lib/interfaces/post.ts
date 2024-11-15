@@ -1,4 +1,4 @@
-export interface Post {
+export interface IPost {
   title: string;
   subtitle?: string;
   author: string;
@@ -10,4 +10,4 @@ export interface Post {
   readingMinutes: number;
 }
 
-export type Posts = Post[];
+export type IPosts = IPost[];
