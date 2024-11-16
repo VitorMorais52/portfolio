@@ -5,8 +5,6 @@ interface Me {
 export default function Me({ className }: Me) {
   return (
     <svg
-      width="1024"
-      height="1024"
       viewBox="0 0 1024 1024"
       fill="none"
       className={className}

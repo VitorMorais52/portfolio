@@ -39,8 +39,8 @@ export default function Post({ post }: PostProps) {
     highlighted: "sm:flex-row mt-[72px]",
   };
   const dynamicImportStyle = {
-    highlighted: "w-[14%] min-w-[180px]",
-    common: "w-[21%] min-w-[120px]",
+    highlighted: "w-[14%] min-w-[180px] h-fit max-h-[60%]",
+    common: "w-[21%] min-w-[120px] h-fit max-h-[60%]",
   };
 
   const handleOpenPost = () => {};
@@ -52,9 +52,7 @@ export default function Post({ post }: PostProps) {
         loading: () => <p>Loading...</p>,
       }
     );
-    return (
-      <ImportedIcon className="w-[60%] h-fit max-h-[60%] fill-[#D9D9D9]" />
-    );
+    return <ImportedIcon className="w-[60%] fill-[#D9D9D9]" />;
   };
 
   return (
