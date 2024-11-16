@@ -10,8 +10,13 @@ export interface IPost {
   readingMinutes: number;
 }
 
+interface ISection {
+  title?: string;
+  list: IPost[];
+}
+
 export interface IPosts {
-  highlighted: IPost[];
-  bestSkills: IPost[];
-  experiences: IPost[];
+  highlighted: ISection;
+  bestSkills: ISection;
+  experiences: ISection;
 }
