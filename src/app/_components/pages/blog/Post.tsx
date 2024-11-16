@@ -26,6 +26,12 @@ export default function Post({ post }: PostProps) {
     paragraphs,
   } = post;
 
+  const formattedDate = new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "2-digit",
+    year: "numeric",
+  }).format(date);
+
   const variation = highlighted ? "highlighted" : "common";
 
   const containerStyle = {
@@ -46,7 +52,9 @@ export default function Post({ post }: PostProps) {
         loading: () => <p>Loading...</p>,
       }
     );
-    return <ImportedIcon className="w-[60%] h-fit fill-[#D9D9D9]" />;
+    return (
+      <ImportedIcon className="w-[60%] h-fit max-h-[60%] fill-[#D9D9D9]" />
+    );
   };
 
   return (
@@ -59,7 +67,7 @@ export default function Post({ post }: PostProps) {
       <div className="w-full xs:w-[77%]">
         <header>
           <p className="text-[14px] text-[#B0B0B0]">
-            <time dateTime={date.toString()}>{date.toString()}</time>
+            <time dateTime={formattedDate}>{formattedDate}</time>
             <span className="ml-4">{readingMinutes} min read</span>
           </p>
           <h2 className="text-[18px] mt-4 mb-2">{title}</h2>
