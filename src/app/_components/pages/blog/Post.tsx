@@ -45,7 +45,7 @@ export default function Post({ post }: PostProps) {
 
   const handleOpenPost = () => {};
 
-  const DynamicIcon = async ({ iconName }: DynamicIconProps) => {
+  const DynamicIcon = ({ iconName }: DynamicIconProps) => {
     const ImportedIcon = dynamic<IconProps>(
       () => import(`./icons/${iconName}.tsx`),
       {
