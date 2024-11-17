@@ -21,11 +21,12 @@ export default function Post({ post }: PostProps) {
     subtitle,
     author,
     readingMinutes,
-    date,
+    date: dateString,
     icon,
     paragraphs,
   } = post;
 
+  const date = new Date(dateString);
   const formattedDate = new Intl.DateTimeFormat("en-US", {
     month: "short",
     day: "2-digit",
