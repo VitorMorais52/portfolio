@@ -72,14 +72,16 @@ export default function Post({ post }: PostProps) {
           <h2 className="text-[18px] mt-4 mb-2">{title}</h2>
           {subtitle && <h2 className="text-[18px] mt-4 mb-2">{subtitle}</h2>}
         </header>
-        {paragraphs.map((paragraph, index) => (
-          <p
-            key={title + index}
-            className="line-clamp-3 xs:line-clamp-2 overflow-hidden text-ellipsis mb-4 mr-4"
-          >
-            {paragraph}
-          </p>
-        ))}
+        <main
+          id="paragraphs"
+          className="line-clamp-3 overflow-hidden text-ellipsis"
+        >
+          {paragraphs.map((paragraph, index) => (
+            <p key={title + index} className="mb-4 mr-4">
+              {paragraph}
+            </p>
+          ))}
+        </main>
         <footer
           className={`flex mt-4 mb-6 ${
             variation === "highlighted" ? "sm:mb-0" : "xs:mb-0"

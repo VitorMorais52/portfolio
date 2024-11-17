@@ -47,7 +47,7 @@ export default function Institutional() {
         </div>
         <div
           id="title"
-          className="max-w-[96%] flex flex-col ml-auto mr-auto mb-[150px] text-center text-[#E7E7E7]"
+          className="max-w-[96%] sm:max-w-full flex flex-col ml-auto mr-auto mb-[150px] text-center text-[#E7E7E7]"
         >
           <span className="text-[34px] ml-auto mr-auto w-fit">
             More than one developer

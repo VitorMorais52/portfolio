@@ -31,6 +31,17 @@ export const posts: IPosts = {
         icon: "CleanCode",
       },
       {
+        title: "NextJS",
+        author: "João Morais",
+        paragraphs: [
+          "I have been studying and following Next.js since version 12, where I had my first professional experience with this framework.",
+          "Today, I am using version 15 to create this humble portfolio.",
+        ],
+        date: new Date("September 1, 2022"),
+        readingMinutes: 4,
+        icon: "CleanCode",
+      },
+      {
         title: "VueJS",
         author: "João Morais",
         paragraphs: [
@@ -51,17 +62,6 @@ export const posts: IPosts = {
         date: new Date("October 4, 2020"),
         readingMinutes: 3,
         icon: "CodeRand",
-      },
-      {
-        title: "NextJS",
-        author: "João Morais",
-        paragraphs: [
-          "I have been studying and following Next.js since version 12, where I had my first professional experience with this framework.",
-          "Today, I am using version 15 to create this humble portfolio.",
-        ],
-        date: new Date("September 1, 2022"),
-        readingMinutes: 4,
-        icon: "CleanCode",
       },
     ],
   },
