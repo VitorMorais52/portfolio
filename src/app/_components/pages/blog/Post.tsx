@@ -80,8 +80,11 @@ export default function Post({ post }: PostProps) {
             {paragraph}
           </p>
         ))}
-
-        <footer className="flex mb-[12px]">
+        <footer
+          className={`flex mt-4 mb-6 ${
+            variation === "highlighted" ? "sm:mb-0" : "xs:mb-0"
+          }`}
+        >
           <p className="flex items-center">
             <Avatar alt="author photo" className="w-[40px] h-[40px]" />
             <span className="ml-2">{author}</span>
