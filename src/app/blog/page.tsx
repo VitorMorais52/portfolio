@@ -1,8 +1,13 @@
+import { headers } from "next/headers";
 import Section from "../_components/pages/blog/Section";
 import { IPosts } from "../_lib/interfaces/post";
 
 export default async function Blog() {
-  const data = await fetch("http://localhost:3000/api/posts");
+  const headersList = await headers();
+  const host = headersList.get("host");
+  const protocol = headersList.get("x-forwarded-proto");
+
+  const data = await fetch(`${protocol}://${host}/api/posts`);
   const posts: IPosts = await data.json();
 
   return (
