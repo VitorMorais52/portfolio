@@ -10,6 +10,7 @@ interface SectionProps {
 
 export default function Section({ section }: SectionProps) {
   const { title, list } = section;
+
   return (
     <section
       id="best-skills-sections"

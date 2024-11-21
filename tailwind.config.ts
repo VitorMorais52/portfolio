@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      hyphens: {
+        auto: 'auto',
+        manual: 'manual',
+        none: 'none',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

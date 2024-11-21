@@ -95,7 +95,7 @@ export default function Institutional() {
           className="mt-[32px] mb-[25px]"
         />
         <h2>About me</h2>
-        <p className="mt-[18px] mb-4 text-justify">
+        <p className="mt-[18px] mb-4 text-justify hyphens-auto">
           My name is João Morais, and I’m a Brazilian developer. I’ve been
           working in development for over 4 years. Since 2016, I’ve been
           studying and striving to discover my best version both as a
@@ -111,14 +111,14 @@ export default function Institutional() {
             className="mt-2 md:mt-0 mx-auto md:mr-auto h-[282px] lg:max-h-[282px]"
           />
           <div>
-            <p className="mt-6 md:mt-0 md:ml-[24px] mb-[24px] text-justify">
+            <p className="mt-6 md:mt-0 md:ml-[24px] mb-[24px] hyphens-auto">
               I have Associate’s Degree since 2018 and I got my first job as
               Software Developer in 2020. Since then, I’ve been conquering for
               experience with various technologies, but having my core skills
               with JavaScript based technologies like ReactJS, NextJS and VueJS.
             </p>
             <div className="flex justify-center flex-col md:flex-row">
-              <p className="md:mx-[24px] text-justify">
+              <p className="md:mx-[24px] hyphens-auto">
                 We are humans, not code or machines. Humanized work is
                 important. “I am because we are”.
               </p>
