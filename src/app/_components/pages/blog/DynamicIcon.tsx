@@ -21,4 +21,5 @@ const DynamicIcon: React.FC<DynamicIconProps> = React.memo(({ iconName }) => {
   return <ImportedIcon className="w-[60%] fill-[#D9D9D9]" />;
 });
 
+DynamicIcon.displayName = "DynamicIcon";
 export default DynamicIcon;

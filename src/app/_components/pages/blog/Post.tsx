@@ -36,6 +36,7 @@ export default function Post({ post }: PostProps) {
     common: "xs:flex-row md:w-[49%] xl:max-w-[624px] mt-[2%]",
     highlighted: "sm:flex-row mt-[72px]",
   };
+
   const dynamicImportStyle = {
     highlighted: "w-[14%] min-w-[180px] h-fit max-h-[60%]",
     common: "w-[21%] min-w-[120px] h-fit max-h-[60%]",
@@ -50,7 +51,7 @@ export default function Post({ post }: PostProps) {
         role="button"
         onClick={() => setIsOpen(true)}
         tabIndex={0}
-        className={`${containerStyle[variation]} flex flex-col items-center w-full justify-between bg-[#242323] rounded-[4px] p-4`}
+        className={`${containerStyle[variation]} flex flex-col items-center w-full justify-between bg-[#242424] hover:bg-[#2c2c2c] transition-colors duration-[250ms] rounded-[4px] p-4`}
       >
         <div className="w-full xs:w-[77%]">
           <header>
