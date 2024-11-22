@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { IPost } from "src/app/_lib/interfaces/post";
 import Avatar from "../../common/avatar";
 import DynamicIcon from "./DynamicIcon";
@@ -10,6 +10,7 @@ interface ModalProps {
 }
 
 export default function Modal({ post, toggleModal }: ModalProps) {
+  const [state, setState] = useState("open");
   const {
     title,
     subtitle,
@@ -19,7 +20,6 @@ export default function Modal({ post, toggleModal }: ModalProps) {
     icon,
     paragraphs,
   } = post;
-  const [state, setState] = useState("open");
 
   const date = new Date(dateString);
   const formattedDate = new Intl.DateTimeFormat("en-US", {
@@ -28,15 +28,33 @@ export default function Modal({ post, toggleModal }: ModalProps) {
     year: "numeric",
   }).format(date);
 
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     setState("closed");
     setTimeout(() => toggleModal(), 200);
-  };
+  }, [toggleModal]);
+
+  const handleEscClick = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        handleCloseModal();
+      }
+    },
+    [handleCloseModal]
+  );
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleEscClick);
+    return () => {
+      window.removeEventListener("keydown", handleEscClick);
+    };
+  }, [handleEscClick]);
 
   return (
     <>
       <div
         data-state={state}
+        role="button"
+        onClick={handleCloseModal}
         className="fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out"
       />
       <div
