@@ -63,10 +63,10 @@ export default function Modal({ post, toggleModal }: ModalProps) {
         aria-describedby="radix-:r1dv:"
         aria-labelledby="radix-:r1du:"
         data-state={state}
-        className="pointer-events-auto data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out bg-[#161616] fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-50 grid w-full max-w-lg gap-4 bg-background p-6 shadow-lg sm:rounded-lg sm:max-w-[425px]"
+        className="pointer-events-auto data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out bg-[#161616] fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-50 grid gap-4 bg-background p-6 shadow-lg sm:rounded-lg w-[90%] sm:max-w-[425px] w-full max-w-lg"
         tabIndex={-1}
       >
-        <div className="flex flex-col space-y-1.5 text-center sm:text-left h-fit">
+        <div className="flex flex-col space-y-1.5 sm:text-left h-fit">
           <header>
             <p className="text-[14px] text-[#B0B0B0]">
               <time dateTime={formattedDate}>{formattedDate}</time>
