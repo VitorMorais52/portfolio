@@ -1,6 +1,6 @@
 "use client";
 import { useRef } from "react";
-import { Star } from "../_components/common/icons";
+import { Star } from "../../common/icons";
 
 export default function Filters() {
   const filtersRef = useRef<HTMLDivElement>(null);

@@ -2,50 +2,11 @@ import Image from "next/image";
 import { Suspense } from "react";
 
 import bgInstitutional from "../../../public/bg-ecommerce.webp";
-
-import IconReactJS from "../_components/common/icons/ecommerce/reactjs";
-import IconJavascript from "../_components/common/icons/ecommerce/javascript";
-import IconTypescript from "../_components/common/icons/ecommerce/typescript";
-import IconVueJS from "../_components/common/icons/ecommerce/vuejs";
-import IconNextJS from "../_components/common/icons/ecommerce/nextjs";
-import IconNodeJS from "../_components/common/icons/ecommerce/nodejs";
-import IconHTML5 from "../_components/common/icons/ecommerce/html5";
-import IconPHP from "../_components/common/icons/ecommerce/php";
-
-import IconCSS from "../_components/common/icons/ecommerce/css";
-import IconDocker from "../_components/common/icons/ecommerce/docker";
-import IconFigma from "../_components/common/icons/ecommerce/figma";
-import IconMariaDB from "../_components/common/icons/ecommerce/mariadb";
-import IconSass from "../_components/common/icons/ecommerce/sass";
-import IconStyledComponents from "../_components/common/icons/ecommerce/styledComponents";
-import IconTailwind from "../_components/common/icons/ecommerce/tailwind";
 import { WrittenLogo } from "../_components/common/icons";
+import { products } from "../_lib/data/products";
 
-import Filters from "./Filters";
-
-//ReactJS X
-//NextJS X
-//VueJS X
-//Typescript X
-//Javascript X
-//HTML & HTML5 X
-//PHP X
-//NodeJS X
-
-//CSS e Module CSS
-//MariaDB
-//Docker
-//Styled-components
-//Sass
-//Tailwind
-//Figma
-
-//Git / Github / Gitlab / Bitbucket
-
-import IconGit from "../_components/common/icons/ecommerce/git";
-import IconGithub from "../_components/common/icons/ecommerce/github";
-import IconGitlab from "../_components/common/icons/ecommerce/gitlab";
-import IconBitbucket from "../_components/common/icons/ecommerce/bitbucket";
+import Product from "../_components/pages/ecommerce/Product";
+import Filters from "../_components/pages/ecommerce/Filters";
 
 export default function Ecommerce() {
   return (
@@ -91,65 +52,9 @@ export default function Ecommerce() {
             id="products"
             className="mt-16 xs:px-8 mb-8 w-full justify-items-center grid gap-8 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]"
           >
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconReactJS className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconNextJS className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconVueJS className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconTypescript className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconJavascript className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconHTML5 className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconNodeJS className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconPHP className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconCSS className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconDocker className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconFigma className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconMariaDB className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconSass className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconStyledComponents className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconTailwind className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconGit className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconGithub className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconGitlab className="w-[60%] h-[60%] stroke-[#D9D9D9]" />
-            </div>
-            <div className="flex justify-center items-center w-[80%] xs:w-[300px] h-[380px] bg-[#000000] rounded-[10px]">
-              <IconBitbucket className="w-[60%] h-[60%] fill-[#D9D9D9]" />
-            </div>
+            {products.map((product) => (
+              <Product key={product.iconName} product={product} />
+            ))}
           </section>
         </section>
       </div>
