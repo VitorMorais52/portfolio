@@ -1,14 +1,24 @@
 import Image from "next/image";
+import { headers } from "next/headers";
+
 import { Suspense } from "react";
 
 import bgInstitutional from "../../../public/bg-ecommerce.webp";
 import { WrittenLogo } from "../_components/common/icons";
-import { products } from "../_lib/data/products";
+
+import { IProducts } from "../_lib/interfaces/product";
 
 import Product from "../_components/pages/ecommerce/Product";
 import Filters from "../_components/pages/ecommerce/Filters";
 
-export default function Ecommerce() {
+export default async function Ecommerce() {
+  const headersList = await headers();
+  const host = headersList.get("host");
+  const protocol = headersList.get("x-forwarded-proto");
+
+  const data = await fetch(`${protocol}://${host}/api/products`);
+  const products: IProducts = await data.json();
+
   return (
     <main className="flex flex-col items-center min-h-screen mx-auto mb-[72px]">
       <div className="h-[427px] w-screen overflow-hidden -z-10">
