@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000" # Mapeando a porta 3000 do contêiner para a 3000 do host
     volumes:
-      - ./app:/app # Montando o diretório local para dentro do contêiner
+      - ./:/app # Montando o diretório local para dentro do contêiner
     environment:
       - NODE_ENV=development # Se necessário, defina o ambiente
     command: yarn dev # Comando para rodar o servidor de desenvolvimento
