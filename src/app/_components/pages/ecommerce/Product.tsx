@@ -41,7 +41,7 @@ export default function Product({ product }: ProductProps) {
       aria-controls="product-details"
       onMouseOver={!isMobile ? toggleDetails : undefined}
       onMouseOut={!isMobile ? toggleDetails : undefined}
-      onClick={handleInteraction}
+      onClick={!isMobile ? undefined : toggleDetails}
       onKeyDown={handleInteraction}
       className="relative"
     >
