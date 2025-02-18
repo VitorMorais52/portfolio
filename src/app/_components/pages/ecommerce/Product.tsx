@@ -9,7 +9,7 @@ interface ProductProps {
 }
 
 export default function Product({ product }: ProductProps) {
-  const { iconName, title } = product;
+  const { iconName, title, experienceTime, description } = product;
 
   const refCover = useRef<null | HTMLDivElement>(null);
   const isMobile = useIsMobile();
@@ -57,10 +57,17 @@ export default function Product({ product }: ProductProps) {
 
       <div
         id="product-details"
-        className="absolute top-0 left-0 w-full h-full p-4 bg-[#000000]"
+        className="flex flex-col items-center absolute top-0 left-0 w-full h-full p-4 bg-[#000000]"
       >
-        <h2>{title}</h2>
-        <p>description</p>
+        <DynamicIcon iconName={iconName} sizeClasses="mt-4 w-[60px] h-[60px]" />
+        <h2 className="mt-2 mb-4 text-[22px]">
+          <strong>{title}</strong>
+        </h2>
+        <p className="text-center">{description}</p>
+        <p className="mt-4 text-[#818181]">Experience time</p>
+        <p>
+          <strong className="font-medium">{experienceTime}</strong>
+        </p>
       </div>
     </div>
   );
