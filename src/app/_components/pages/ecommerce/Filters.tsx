@@ -1,6 +1,9 @@
 "use client";
 import { useRef } from "react";
-import { Star } from "../../common/icons";
+
+interface CustomCheckBox {
+  title: string;
+}
 
 export default function Filters() {
   const filtersRef = useRef<HTMLDivElement>(null);
@@ -12,6 +15,19 @@ export default function Filters() {
       filtersRef.current.classList.toggle("opacity-0");
       filtersRef.current.classList.toggle("opacity-100");
     }
+  };
+
+  const CustomCheckbox = ({ title }: CustomCheckBox) => {
+    return (
+      <label className="flex items-center gap-2 cursor-pointer">
+        <input type="checkbox" className="hidden peer" />
+        <div
+          className="w-5 h-5 border-2 border-gray-500 rounded-md flex items-center justify-center 
+                      peer-checked:border-blue-500 peer-checked:bg-blue-500 transition-all"
+        ></div>
+        <span className="text-gray-800 dark:text-gray-200">{title}</span>
+      </label>
+    );
   };
 
   return (
@@ -30,14 +46,15 @@ export default function Filters() {
         style={{ zIndex: "11" }}
         className="w-[320px] bg-[#0C0C0C] flex flex-col items-start absolute top-0 left-0 bottom-0 transform -translate-x-full opacity-0 transition-all duration-500 ease-in-out"
       >
-        <section id="reviews" className="mt-20 pl-6">
-          <h3>Reviews</h3>
-          <div className="flex mt-1 ml-[-2px]">
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
+        <section id="Fields" className="mt-20 pl-6">
+          <h3 className="mb-2">Fields</h3>
+          <div className="flex flex-col gap-2 mt-1 ml-[-2px]">
+            <CustomCheckbox title="Frontend" />
+            <CustomCheckbox title="Backend" />
+            <CustomCheckbox title="Database" />
+            <CustomCheckbox title="UI/UX" />
+            <CustomCheckbox title="Code versioning" />
+            <CustomCheckbox title="Containerization" />
           </div>
         </section>
         <section id="sides"></section>
