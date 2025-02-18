@@ -19,7 +19,7 @@ export default function Filters() {
       <button
         type="button"
         onClick={toggleFilters}
-        style={{ zIndex: "1" }}
+        style={{ zIndex: "12" }}
         className="absolute top-4 left-[2.5rem] text-lg"
       >
         Filters
@@ -27,6 +27,7 @@ export default function Filters() {
       <section
         id="leftBar"
         ref={filtersRef}
+        style={{ zIndex: "11" }}
         className="w-[320px] bg-[#0C0C0C] flex flex-col items-start absolute top-0 left-0 bottom-0 transform -translate-x-full opacity-0 transition-all duration-500 ease-in-out"
       >
         <section id="reviews" className="mt-20 pl-6">
