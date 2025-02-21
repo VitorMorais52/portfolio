@@ -3,6 +3,7 @@ export interface IProduct {
   title: string;
   experienceTime: string;
   description: string;
+  types: string[];
 }
 
 export type IProducts = IProduct[];

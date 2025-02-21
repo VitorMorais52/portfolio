@@ -1,15 +1,15 @@
 import Image from "next/image";
 import { headers } from "next/headers";
-
 import { Suspense } from "react";
 
 import bgInstitutional from "../../../public/bg-ecommerce.webp";
 import { WrittenLogo } from "../_components/common/icons";
 
-import { IProducts } from "../_lib/interfaces/product";
-
+import { IProducts, IProduct } from "../_lib/interfaces/product";
 import Product from "../_components/pages/ecommerce/Product";
 import Filters from "../_components/pages/ecommerce/Filters";
+
+import { FilterProvider, useFilters } from "../_lib/contexts/useProductsFilter";
 
 export default async function Ecommerce() {
   const headersList = await headers();
@@ -18,6 +18,16 @@ export default async function Ecommerce() {
 
   const data = await fetch(`${protocol}://${host}/api/products`);
   const products: IProducts = await data.json();
+
+  return (
+    <FilterProvider products={products}>
+      <MainContent />
+    </FilterProvider>
+  );
+}
+
+function MainContent() {
+  const { filteredProducts } = useFilters();
 
   return (
     <main className="flex flex-col items-center min-h-screen mx-auto mb-[72px]">
@@ -52,7 +62,7 @@ export default async function Ecommerce() {
             type="text"
             placeholder="Search"
             className="mt-6 border-2 border-solid border-[#585858] rounded-[12px] text-[#E7E7E7] bg-transparent p-1 pl-2"
-          ></input>
+          />
         </div>
       </div>
       <div id="container" className="relative flex mt-[-6rem] w-full">
@@ -62,7 +72,7 @@ export default async function Ecommerce() {
             id="products"
             className="mt-16 xs:px-8 mb-8 w-full justify-items-center grid gap-8 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]"
           >
-            {products.map((product) => (
+            {filteredProducts.map((product: IProduct) => (
               <Product key={product.iconName} product={product} />
             ))}
           </section>
