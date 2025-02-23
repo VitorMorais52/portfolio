@@ -1,5 +1,6 @@
 "use client";
-import { useRef } from "react";
+import { ChangeEvent, useRef } from "react";
+import { useFilters } from "src/app/_lib/contexts/useProductsFilter";
 
 interface CustomCheckBox {
   title: string;
@@ -7,7 +8,9 @@ interface CustomCheckBox {
 }
 
 export default function Filters() {
+  const { types, setType } = useFilters();
   const filtersRef = useRef<HTMLDivElement>(null);
+
   const toggleFilters = () => {
     if (filtersRef.current) {
       filtersRef.current.classList.toggle("translate-x-0");
@@ -25,7 +28,8 @@ export default function Filters() {
           type="checkbox"
           className="hidden peer"
           value={value}
-          onChange={(e) => console.log("clicked is checked", e.target.checked)}
+          checked={types.includes(value)}
+          onChange={({ target }) => setType(target.value)}
         />
         <div
           className="w-5 h-5 border-2 border-gray-500 rounded-md flex items-center justify-center 

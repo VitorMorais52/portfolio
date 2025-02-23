@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useMemo } from "react";
 import { IProducts } from "../interfaces/product";
 
 interface FilterContextType {
-  type: string[];
+  types: string[];
   name: string;
   setType: (newType: string) => void;
   setName: (newName: string) => void;
@@ -18,11 +18,11 @@ export const FilterProvider = ({
   children: React.ReactNode;
   products: IProducts;
 }) => {
-  const [type, setTypeState] = useState<string[]>([]);
+  const [types, setTypesState] = useState<string[]>([]);
   const [name, setName] = useState<string>("");
 
   const setType = (newType: string) => {
-    setTypeState((prev) =>
+    setTypesState((prev) =>
       prev.includes(newType)
         ? prev.filter((t) => t !== newType)
         : [...prev, newType]
@@ -32,16 +32,16 @@ export const FilterProvider = ({
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
       const matchesType =
-        type.length === 0 || type.some((t) => product.types.includes(t));
+        types.length === 0 || types.some((t) => product.types.includes(t));
       const matchesName =
         name === "" || product.title.toLowerCase().includes(name.toLowerCase());
       return matchesType && matchesName;
     });
-  }, [products, type, name]);
+  }, [products, types, name]);
 
   return (
     <FilterContext.Provider
-      value={{ type, name, setType, setName, filteredProducts }}
+      value={{ types, name, setType, setName, filteredProducts }}
     >
       {children}
     </FilterContext.Provider>
