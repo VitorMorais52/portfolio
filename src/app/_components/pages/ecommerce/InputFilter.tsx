@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { useFilters } from "src/app/_lib/contexts/useProductsFilter";
 
 export default function InputFilter() {
