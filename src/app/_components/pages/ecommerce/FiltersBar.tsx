@@ -1,5 +1,5 @@
 "use client";
-import { ChangeEvent, useRef } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { useFilters } from "src/app/_lib/contexts/useProductsFilter";
 
 interface CustomCheckBox {
@@ -10,6 +10,8 @@ interface CustomCheckBox {
 export default function Filters() {
   const { types, setType } = useFilters();
   const filtersRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleFiltersBar = () => {
     if (filtersRef.current) {
@@ -18,8 +20,30 @@ export default function Filters() {
 
       filtersRef.current.classList.toggle("opacity-0");
       filtersRef.current.classList.toggle("opacity-100");
+
+      setIsOpen((prev) => !prev);
     }
   };
+
+  const handleOutsideClick = useCallback(
+    (event: MouseEvent) => {
+      if (
+        isOpen &&
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        toggleFiltersBar();
+      }
+    },
+    [isOpen]
+  );
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isOpen, handleOutsideClick]);
 
   const CustomCheckbox = ({ title, value }: CustomCheckBox) => {
     return (
@@ -41,7 +65,7 @@ export default function Filters() {
   };
 
   return (
-    <>
+    <div ref={containerRef} className="relative">
       <button
         type="button"
         onClick={toggleFiltersBar}
@@ -50,7 +74,6 @@ export default function Filters() {
       >
         Filters
       </button>
-
       <section
         id="leftBar"
         ref={filtersRef}
@@ -92,6 +115,6 @@ export default function Filters() {
         </section>
         <section id="sides"></section>
       </section>
-    </>
+    </div>
   );
 }
