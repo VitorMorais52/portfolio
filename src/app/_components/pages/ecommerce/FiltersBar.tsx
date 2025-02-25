@@ -11,7 +11,7 @@ export default function Filters() {
   const { types, setType } = useFilters();
   const filtersRef = useRef<HTMLDivElement>(null);
 
-  const toggleFilters = () => {
+  const toggleFiltersBar = () => {
     if (filtersRef.current) {
       filtersRef.current.classList.toggle("translate-x-0");
       filtersRef.current.classList.toggle("-translate-x-full");
@@ -44,18 +44,41 @@ export default function Filters() {
     <>
       <button
         type="button"
-        onClick={toggleFilters}
+        onClick={toggleFiltersBar}
         style={{ zIndex: "12" }}
         className="absolute top-4 left-[2.5rem] text-lg"
       >
         Filters
       </button>
+
       <section
         id="leftBar"
         ref={filtersRef}
         style={{ zIndex: "11" }}
         className="w-[320px] bg-[#0C0C0C] flex flex-col items-start absolute top-0 left-0 bottom-0 transform -translate-x-full opacity-0 transition-all duration-500 ease-in-out"
       >
+        <button
+          type="button"
+          className="absolute m-[4] mt-[22px] right-4"
+          onClick={toggleFiltersBar}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-x h-4 w-4"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+          <span className="sr-only">Close</span>
+        </button>
         <section id="Fields" className="mt-20 pl-6">
           <h3 className="mb-2">Fields</h3>
           <div className="flex flex-col gap-2 mt-1 ml-[-2px]">
