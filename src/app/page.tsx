@@ -27,13 +27,13 @@ export default function Home() {
             <h3 className="flex">
               <Bricks className="mr-2" /> I have the base stack
             </h3>
-            <p className="font-extralight">HTML, CSS and JavaScript.</p>
+            <p className="font-extralight mt-1">HTML, CSS and JavaScript.</p>
           </section>
           <section className="flex flex-col w-fit">
             <h3 className="flex">
               <Screen className="mr-2" /> The popular
             </h3>
-            <p className="font-extralight">
+            <p className="font-extralight mt-1">
               ReactJS, NextJS, VueJS and TypeScript.
             </p>
           </section>
@@ -41,7 +41,7 @@ export default function Home() {
             <h3 className="flex">
               <Styling className="mr-2" /> For styling
             </h3>
-            <p className="font-extralight">
+            <p className="font-extralight mt-1">
               Styled-components, Sass and Bootstrap.
             </p>
           </section>
@@ -50,7 +50,7 @@ export default function Home() {
               <Database className="mr-2" /> I’ve already worked as Backend
               Developer using
             </h3>
-            <p className="font-extralight">
+            <p className="font-extralight mt-1">
               NodeJS, PHP and Laravel, MariaDB and Docker.
             </p>
           </section>
@@ -58,7 +58,7 @@ export default function Home() {
             <h3 className="flex">
               <Git className="mr-2" /> For version control
             </h3>
-            <p className="font-extralight">
+            <p className="font-extralight mt-1">
               Git, GitLab, GitHub and Bitbucket.
             </p>
           </section>
@@ -66,13 +66,13 @@ export default function Home() {
             <h3 className="flex">
               <Design className="mr-2" /> For layout design
             </h3>
-            <p className="font-extralight">Figma and Adobe XD.</p>
+            <p className="font-extralight mt-1">Figma and Adobe XD.</p>
           </section>
           <section className="flex flex-col w-fit">
             <h3 className="flex">
               <Tools className="mr-2" /> The tools I&apos;m familiar with
             </h3>
-            <p className="font-extralight">
+            <p className="font-extralight mt-1">
               Google Tag Manager, Google Analytics and Atlassian resources.
             </p>
           </section>
@@ -81,20 +81,20 @@ export default function Home() {
               <Message className="mr-2" />
               Communication platforms
             </h3>
-            <p className="font-extralight">Teams, Slack and Discord.</p>
+            <p className="font-extralight mt-1">Teams, Slack and Discord.</p>
           </section>
           <section className="flex flex-col w-fit">
             <h3 className="flex">
               <Management className="mr-2" />
               Favorite agile methodologies
             </h3>
-            <p className="font-extralight">Scrum and Kanban.</p>
+            <p className="font-extralight mt-1">Scrum and Kanban.</p>
           </section>
         </div>
       </section>
 
       <section id="product-types" className="mt-[42px] px-4">
-        <h2 className="text-center">What products have I worked on?</h2>
+        <h2 className="text-center">What kind of products have I worked on?</h2>
         <p className="mt-2 font-extralight text-center">
           CRM, ERP, Institutional Pages, Landing Pages and a Realtime Chat.
         </p>
@@ -111,16 +111,6 @@ export default function Home() {
           communication. Technical skills alone are not enough.
         </p>
       </section>
-
-      {/* <section id="projects" className="w-full mt-[86px]">
-        <h2 className="text-center text-[18px]">Projects</h2>
-        <div>
-          <section id="project-card"></section>
-          <section id="project-card"></section>
-          <section id="project-card"></section>
-          <section id="project-card"></section>
-        </div>
-      </section> */}
     </main>
   );
 }
