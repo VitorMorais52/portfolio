@@ -39,7 +39,7 @@ const Menu = ({ pagesName }: MenuProps) => {
   return (
     <div id="menu-container" className="">
       <button
-        className="absolute top-0 right-0 transform translate-x-0 opacity-100 transition-all duration-500 ease-in-out"
+        className="w-fit absolute top-0 right-0 transform translate-x-0 opacity-100 transition-all duration-500 ease-in-out"
         onClick={toggleMenu}
         ref={buttonMenuRef}
       >
@@ -57,7 +57,7 @@ const Menu = ({ pagesName }: MenuProps) => {
         className={`z-10 h-screen fixed pt-1 2xl:pt-16 flex flex-col w-[240px] sm:w-[300px] h-[100vh] bg-black top-0 right-[-16px] transform translate-x-full opacity-0 transition-all duration-500 ease-in-out`}
       >
         <button
-          className="flex mt-[44px] sm:mt-[92px] 2xl:mt-0 ml-4"
+          className="w-fit flex mt-[44px] sm:mt-[92px] 2xl:mt-0 ml-4"
           onClick={toggleMenu}
         >
           <Burguer />
