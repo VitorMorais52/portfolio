@@ -6,6 +6,7 @@ export default function Introducing() {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleSelect = (option: string) => {
+    return;
     window.gtag("event", "home_events", {
       event_category: "who are you",
       event_label: option,
@@ -14,14 +15,23 @@ export default function Introducing() {
 
   return (
     <div
-      className="relative w-fit mx-auto"
-      onMouseEnter={() => setIsHovered(true)}
+      className="relative w-full h-full flex flex-col items-center h-[36px]"
       onMouseLeave={() => setIsHovered(false)}
     >
-      <span className=" font-extralight text-[14px]">Who are you?</span>
+      <span
+        className={`mt-[6px] absolute transition-transform duration-300 ease-in-out ${
+          isHovered
+            ? "-translate-y-full opacity-0"
+            : "translate-y-0 opacity-100"
+        }`}
+        onMouseEnter={() => setIsHovered(true)}
+      >
+        Who are you?
+      </span>
+
       <div
-        className={`absolute left-1/2 top-full mt-2 w-[200px] -translate-x-1/2 transform rounded-lg bg-white p-3 shadow-lg transition-all duration-300 ease-in-out ${
-          isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+        className={`absolute flex gap-4 transition-transform duration-300 ease-in-out ${
+          isHovered ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
         }`}
       >
         {[
@@ -31,7 +41,7 @@ export default function Introducing() {
         ].map((option) => (
           <button
             key={option.value}
-            className="block w-full rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            className="rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             onClick={() => handleSelect(option.value)}
           >
             {option.label}
