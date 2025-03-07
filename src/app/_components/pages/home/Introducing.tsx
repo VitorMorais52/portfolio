@@ -6,20 +6,19 @@ export default function Introducing() {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleSelect = (option: string) => {
-    return;
     window.gtag("event", "home_events", {
-      event_category: "who are you",
+      event_category: "who are you?",
       event_label: option,
     });
   };
 
   return (
     <div
-      className="relative w-full h-full flex flex-col items-center h-[36px]"
+      className="overflow-hidden relative w-full h-full flex flex-col items-center h-[36px]"
       onMouseLeave={() => setIsHovered(false)}
     >
       <span
-        className={`mt-[6px] absolute transition-transform duration-300 ease-in-out ${
+        className={`cursor-pointer mt-[6px] absolute transition-transform duration-300 ease-in-out ${
           isHovered
             ? "-translate-y-full opacity-0"
             : "translate-y-0 opacity-100"
@@ -41,7 +40,7 @@ export default function Introducing() {
         ].map((option) => (
           <button
             key={option.value}
-            className="rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            className="rounded-md px-4 py-2 text-sm hover:text-gray-700 hover:bg-gray-100"
             onClick={() => handleSelect(option.value)}
           >
             {option.label}
