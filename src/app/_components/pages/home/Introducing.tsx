@@ -39,7 +39,7 @@ export default function Introducing() {
         }`}
         onMouseEnter={() => setIsHovered(true)}
       >
-        <PointingFinger className="absolute top-[4px] left-[-22px] w-[16px] h-[16px] animate-pulse" />
+        <PointingFinger className="absolute top-[2px] left-[-26px] w-[20px] h-[20px] animate-pulse" />
         Who are you?
       </span>
       <div
