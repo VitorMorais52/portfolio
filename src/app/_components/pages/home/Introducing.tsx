@@ -14,7 +14,7 @@ export default function Introducing() {
 
   return (
     <div
-      className="overflow-hidden relative w-full h-full flex flex-col items-center h-[36px]"
+      className="overflow-hidden relative w-full flex flex-col items-center h-[36px]"
       onMouseLeave={() => setIsHovered(false)}
     >
       <span
@@ -27,7 +27,6 @@ export default function Introducing() {
       >
         Who are you?
       </span>
-
       <div
         className={`absolute flex gap-4 transition-transform duration-300 ease-in-out ${
           isHovered ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
