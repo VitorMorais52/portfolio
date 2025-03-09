@@ -6,9 +6,11 @@ import { Mark } from "../../common/icons";
 export default function Introducing() {
   const [isHovered, setIsHovered] = useState(false);
   const [loadingButton, setLoadingButton] = useState<string | null>(null);
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
   const handleSelect = (option: string) => {
     setLoadingButton(option);
+    setSelectedOption(option);
     window.gtag("event", "home_events", {
       event_category: "who are you?",
       event_label: option,
@@ -19,6 +21,7 @@ export default function Introducing() {
       setTimeout(() => {
         setLoadingButton(null);
         setIsHovered(false);
+        setSelectedOption(null);
       }, 1000);
     }, 1200);
   };
@@ -39,7 +42,7 @@ export default function Introducing() {
         Who are you?
       </span>
       <div
-        className={`absolute flex gap-4 transition-transform duration-300 ease-in-out ${
+        className={`absolute flex transition-transform duration-300 ease-in-out ${
           isHovered ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
         }`}
       >
@@ -52,7 +55,7 @@ export default function Introducing() {
             key={option.value}
             className="rounded-md px-4 py-2 text-sm hover:text-gray-700 hover:bg-gray-100 flex items-center justify-center h-[36px] w-[92px]"
             onClick={() => handleSelect(option.value)}
-            disabled={loadingButton !== null}
+            disabled={selectedOption !== null}
           >
             {loadingButton === option.value ? (
               <div className="animate-spin w-4 h-4 border-2 border-gray-500 border-t-transparent rounded-full" />
