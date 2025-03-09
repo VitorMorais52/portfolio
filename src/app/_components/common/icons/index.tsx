@@ -16,6 +16,7 @@ import Message from "./message";
 import Management from "./management";
 import Styling from "./styling";
 import Mark from "./mark";
+import PointingFinger from "./pointingFinger";
 
 export {
   Logo,
@@ -36,4 +37,5 @@ export {
   Management,
   Styling,
   Mark,
+  PointingFinger,
 };

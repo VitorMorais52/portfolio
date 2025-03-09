@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mark } from "../../common/icons";
+import { Mark, PointingFinger } from "../../common/icons";
 
 export default function Introducing() {
   const [isHovered, setIsHovered] = useState(false);
@@ -39,6 +39,7 @@ export default function Introducing() {
         }`}
         onMouseEnter={() => setIsHovered(true)}
       >
+        <PointingFinger className="absolute top-[4px] left-[-22px] w-[16px] h-[16px] animate-pulse" />
         Who are you?
       </span>
       <div
