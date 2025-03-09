@@ -15,6 +15,7 @@ import Git from "./git";
 import Message from "./message";
 import Management from "./management";
 import Styling from "./styling";
+import Mark from "./mark";
 
 export {
   Logo,
@@ -34,4 +35,5 @@ export {
   Message,
   Management,
   Styling,
+  Mark,
 };

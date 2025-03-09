@@ -14,7 +14,10 @@ import Introducing from "./_components/pages/home/Introducing";
 export default function Home() {
   return (
     <main className="flex flex-col items-center max-w-7xl mx-auto mb-[72px]">
-      <section id="introducing" className="flex flex-col px-4">
+      <section
+        id="introducing"
+        className="flex flex-col items-center justify-center w-full px-4"
+      >
         <h1 className="mt-[86px] text-[24px]">I&apos;m a Frontend Developer</h1>
         <Introducing />
       </section>

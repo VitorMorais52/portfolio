@@ -1,15 +1,26 @@
 "use client";
 
 import { useState } from "react";
+import { Mark } from "../../common/icons";
 
 export default function Introducing() {
   const [isHovered, setIsHovered] = useState(false);
+  const [loadingButton, setLoadingButton] = useState<string | null>(null);
 
   const handleSelect = (option: string) => {
+    setLoadingButton(option);
     window.gtag("event", "home_events", {
       event_category: "who are you?",
       event_label: option,
     });
+
+    setTimeout(() => {
+      setLoadingButton("check-" + option);
+      setTimeout(() => {
+        setLoadingButton(null);
+        setIsHovered(false);
+      }, 1000);
+    }, 1200);
   };
 
   return (
@@ -39,10 +50,17 @@ export default function Introducing() {
         ].map((option) => (
           <button
             key={option.value}
-            className="rounded-md px-4 py-2 text-sm hover:text-gray-700 hover:bg-gray-100"
+            className="rounded-md px-4 py-2 text-sm hover:text-gray-700 hover:bg-gray-100 flex items-center justify-center h-[36px] w-[92px]"
             onClick={() => handleSelect(option.value)}
+            disabled={loadingButton !== null}
           >
-            {option.label}
+            {loadingButton === option.value ? (
+              <div className="animate-spin w-4 h-4 border-2 border-gray-500 border-t-transparent rounded-full" />
+            ) : loadingButton === "check-" + option.value ? (
+              <Mark className="w-[26px] h-[26px]" />
+            ) : (
+              option.label
+            )}
           </button>
         ))}
       </div>
