@@ -11,8 +11,6 @@ export default function Introducing() {
     previousAnswer
   );
 
-  console.log(selectedOption);
-
   const handleSelect = (option: string) => {
     if (selectedOption) return;
 
