@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { Mark, PointingFinger } from "../../common/icons";
 
-const previousAnswer = localStorage.getItem("@mt-portfolio/whoAreYou") || null;
 export default function Introducing() {
+  const previousAnswer =
+    localStorage.getItem("@mt-portfolio/whoAreYou") || null;
   const [isHovered, setIsHovered] = useState(false);
   const [loadingButton, setLoadingButton] = useState<string | null>(null);
   const [selectedOption, setSelectedOption] = useState<string | null>(
