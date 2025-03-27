@@ -5,7 +5,7 @@ import { Mark, PointingFinger } from "../../common/icons";
 
 export default function Introducing() {
   const previousAnswer =
-    localStorage.getItem("@mt-portfolio/whoAreYou") || null;
+    (localStorage && localStorage.getItem("@mt-portfolio/whoAreYou")) || null;
   const [isHovered, setIsHovered] = useState(false);
   const [loadingButton, setLoadingButton] = useState<string | null>(null);
   const [selectedOption, setSelectedOption] = useState<string | null>(
@@ -17,7 +17,7 @@ export default function Introducing() {
 
     setLoadingButton(option);
     setSelectedOption(option);
-    localStorage.setItem("@mt-portfolio/whoAreYou", option);
+    if (localStorage) localStorage.setItem("@mt-portfolio/whoAreYou", option);
 
     window.gtag("event", "home_events", {
       event_category: "who are you?",
