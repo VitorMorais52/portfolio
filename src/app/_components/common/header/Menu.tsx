@@ -37,7 +37,7 @@ const Menu = ({ pagesName }: MenuProps) => {
   };
 
   return (
-    <div id="menu-container" className="">
+    <div id="menu-container" className="sm:hidden">
       <button
         className="w-fit absolute top-0 right-0 transform translate-x-0 opacity-100 transition-all duration-500 ease-in-out"
         onClick={toggleMenu}
