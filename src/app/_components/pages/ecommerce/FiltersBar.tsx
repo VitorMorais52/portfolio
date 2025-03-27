@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useEffect, useState, useCallback } from "react";
 import { useFilters } from "src/app/_lib/contexts/useProductsFilter";
+import { Filters as FiltersIcon } from "../../common/icons";
 
 interface CustomCheckBox {
   title: string;
@@ -69,17 +70,25 @@ export default function Filters() {
       <button
         type="button"
         onClick={toggleFiltersBar}
-        style={{ zIndex: "12" }}
-        className="absolute top-4 left-[2.5rem] text-lg"
+        style={{ zIndex: "11" }}
+        className={`rounded-md absolute top-4 left-[2.5rem] flex  items-center justify-center text-lg gap-2 text-black bg-[#F0F0F0] px-4
+        hover:bg-gray-300 ${isOpen ? "cursor-auto" : ""}`}
       >
-        Filters
+        <FiltersIcon className="w-[20px] h-[20px] mt-[0px]" /> Filters
       </button>
       <section
         id="leftBar"
         ref={filtersRef}
-        style={{ zIndex: "11" }}
+        style={{ zIndex: "12" }}
         className="w-[320px] bg-[#0C0C0C] flex flex-col items-start absolute top-0 left-0 bottom-0 transform -translate-x-full opacity-0 transition-all duration-500 ease-in-out"
       >
+        {/* <button
+          type="button"
+          onClick={toggleFiltersBar}
+          className="rounded-md absolute top-4 left-6 flex  items-center justify-center text-lg"
+        >
+          Filters
+        </button> */}
         <button
           type="button"
           className="absolute m-[4] mt-[22px] right-4"
@@ -102,7 +111,7 @@ export default function Filters() {
           </svg>
           <span className="sr-only">Close</span>
         </button>
-        <section id="Fields" className="mt-20 pl-6">
+        <section id="Fields" className="mt-4 pl-6">
           <h3 className="mb-2">Fields</h3>
           <div className="flex flex-col gap-2 mt-1 ml-[-2px]">
             <CustomCheckbox title="Frontend" value="frontend" />

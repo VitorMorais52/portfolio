@@ -17,6 +17,7 @@ import Management from "./management";
 import Styling from "./styling";
 import Mark from "./mark";
 import PointingFinger from "./pointingFinger";
+import Filters from "./filters";
 
 export {
   Logo,
@@ -38,4 +39,5 @@ export {
   Styling,
   Mark,
   PointingFinger,
+  Filters,
 };
