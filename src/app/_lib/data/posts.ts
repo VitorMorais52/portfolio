@@ -8,7 +8,7 @@ export const posts: IPosts = {
         author: "João Morais",
         highlighted: true,
         paragraphs: [
-          "My name is João Morais, I’m a Brazilian Developer and I’ve been working with development for over 4 years.",
+          "My name is João Morais, I’m a Brazilian Software Engineer and I’ve been working with development for over 4 years.",
         ],
         date: new Date("November 8, 2024"),
         readingMinutes: 1,
@@ -70,7 +70,7 @@ export const posts: IPosts = {
     list: [
       {
         title: "Code49",
-        subtitle: "Web System Developer",
+        subtitle: "Frontend Software Engineer",
         author: "João Morais",
         paragraphs: [
           "Responsible for maintaining the product, implementing new ''features and also for refactoring and migrating part of the project to use new technologies and frameworks.",
@@ -82,7 +82,7 @@ export const posts: IPosts = {
       },
       {
         title: "SOFTABLE",
-        subtitle: "Frontend Web Developer",
+        subtitle: "Frontend Software Engineer",
         author: "João Morais",
         paragraphs: [
           "I participated in the migration and refactoring of an ERP product at its beginning, being also responsible for implementing new screens and functionalities.",
@@ -94,7 +94,7 @@ export const posts: IPosts = {
       },
       {
         title: "UOL",
-        subtitle: "Frontend Web Developer",
+        subtitle: "Frontend Software Engineer",
         author: "João Morais",
         paragraphs: [
           "Responsible for maintaining and adding new features to the product, this being a realtime chat.",

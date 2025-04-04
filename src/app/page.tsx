@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center max-w-7xl mx-auto mb-[72px]">
       <section id="introducing" className="flex flex-col px-4">
-        <h1 className="mt-[86px] text-[24px]">I&apos;m a Frontend Developer</h1>
+        <h1 className="mt-[86px] text-[24px]">I&apos;m a Software Engineer</h1>
         <Introducing />
       </section>
 
@@ -102,8 +102,8 @@ export default function Home() {
       <section id="about-me" className="w-full mt-[86px] px-4">
         <h2 className="text-center">About me</h2>
         <p className="mt-2 font-extralight text-center">
-          My name is João Morais, I’m a Brazilian Developer and I’ve been
-          working with development for over 4 years.
+          My name is João Morais, I’m a Brazilian Software Engineer and I’ve
+          been working with development for over 4 years.
         </p>
         <p className="font-extralight text-center">
           I believe that a good work environment is based on good and clear

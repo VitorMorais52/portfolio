@@ -9,9 +9,7 @@ export default function Resume() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between max-w-7xl mx-auto">
       <div className="mx-4 sm:my-[72px] mt-16 pb-12 sm:pb-[84px] px-4 sm:px-[34px] lg:w-[850px] flex flex-col border border-solid border-[#8B8B8B] bg-[#1A1A1A]">
-        <h1 className="mx-auto mt-[84px] text-[26px]">
-          Frontend Web Developer
-        </h1>
+        <h1 className="mx-auto mt-[84px] text-[26px]">Software Engineer</h1>
         <section id="personalInfo" className="w-auto mt-8">
           <h2 className="text-[20px]">João Morais</h2>{" "}
           <p className="font-extralight">
@@ -36,7 +34,7 @@ export default function Resume() {
               <section id="UOL" className="mt-2">
                 <p className=" text-[18px]">
                   <strong className="font-normal">
-                    Frontend Developer at UOL - Universo Online
+                    Frontend Software Engineer at UOL - Universo Online
                   </strong>
                 </p>
                 <p className="font-extralight">May 2022 - Present</p>
@@ -57,7 +55,7 @@ export default function Resume() {
               <section id="SOFTABLE" className="mt-4">
                 <p className="text-[18px]">
                   <strong className="font-normal">
-                    Frontend Developer at Softable LTDA
+                    Frontend Software Engineer at Softable LTDA
                   </strong>
                 </p>
                 <p className="font-extralight">September 2021 - January 2022</p>
@@ -77,7 +75,7 @@ export default function Resume() {
               <section id="CODE49" className="mt-4">
                 <p className="text-[18px]">
                   <strong className="font-normal">
-                    System Developer at Code49
+                    Software Engineer at Code49
                   </strong>
                 </p>
                 <p className="font-extralight">

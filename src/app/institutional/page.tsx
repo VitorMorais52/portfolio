@@ -96,8 +96,8 @@ export default function Institutional() {
         />
         <h2>About me</h2>
         <p className="mt-[18px] mb-4 text-justify hyphens-auto">
-          My name is João Morais, and I’m a Brazilian developer. I’ve been
-          working in development for over 4 years. Since 2016, I’ve been
+          My name is João Morais, and I’m a Brazilian Software Engineer. I’ve
+          been working with development for over 4 years. Since 2016, I’ve been
           studying and striving to discover my best version both as a
           professional and as a person.
         </p>
