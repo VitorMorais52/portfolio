@@ -30,6 +30,31 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.rain-line {
+  position: fixed;
+  top: -100px;
+  width: 1px;
+  height: 100px;
+  background: white;
+  opacity: 0.1;
+  animation-name: rain-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes rain-fall {
+  0% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
