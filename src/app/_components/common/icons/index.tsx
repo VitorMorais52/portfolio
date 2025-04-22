@@ -18,6 +18,7 @@ import Styling from "./styling";
 import Mark from "./mark";
 import PointingFinger from "./pointingFinger";
 import Filters from "./filters";
+import GmailLogo from "./gmailLogo";
 
 export {
   Logo,
@@ -40,4 +41,5 @@ export {
   Mark,
   PointingFinger,
   Filters,
+  GmailLogo,
 };

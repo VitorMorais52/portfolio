@@ -8,7 +8,8 @@ export const posts: IPosts = {
         author: "João Morais",
         highlighted: true,
         paragraphs: [
-          "My name is João Morais, I’m a Brazilian Software Engineer and I’ve been working with development for over 4 years.",
+          "With 4+ years of experience in website development, I have worked on medium and large-scale products, focusing on performance optimization, usability, and accessibility. Additionally, I have been actively involved in creating and implementing new features, always adhering to industry standards and seeking innovation efficiently, basing decisions on test results and metric analysis.",
+          "I have solid expertise in JavaScript technologies, with proficiency in frameworks and libraries such as ReactJS, NextJS, and VueJS. I have applied these tools to develop various products, including catalogs, real-time chats, ERP and CRM systems, landing pages, and institutional websites. On the backend, I have experience building APIs and other services using PHP and Node.js, with libraries like ExpressJS and NestJS.",
         ],
         date: new Date("November 8, 2024"),
         readingMinutes: 1,

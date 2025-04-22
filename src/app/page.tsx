@@ -101,7 +101,7 @@ export default function Home() {
 
       <section id="about-me" className="w-full mt-[86px] px-4">
         <h2 className="text-center">About me</h2>
-        <p className="mt-2 font-extralight text-left">
+        <p className="mt-2 font-extralight text-justify hyphens-auto">
           &nbsp;&nbsp; With 4+ years of experience in website development, I
           have worked on medium and large-scale products, focusing on
           performance optimization, usability, and accessibility. Additionally,
@@ -109,7 +109,7 @@ export default function Home() {
           features, always adhering to industry standards and seeking innovation
           efficiently, basing decisions on test results and metric analysis.
         </p>
-        <p className="mt-2 font-extralight text-left">
+        <p className="mt-2 font-extralight text-justify hyphens-auto">
           &nbsp;&nbsp; I have solid expertise in JavaScript technologies, with
           proficiency in frameworks and libraries such as ReactJS, NextJS, and
           VueJS. I have applied these tools to develop various products,
@@ -118,7 +118,7 @@ export default function Home() {
           building APIs and other services using PHP and Node.js, with libraries
           like ExpressJS and NestJS.
         </p>
-        <p className="mt-2 font-extralight text-left">
+        <p className="mt-2 font-extralight text-justify hyphens-auto">
           &nbsp;&nbsp; I am continuously expanding my knowledge by working on
           study projects, where I am responsible for prototyping and
           implementing screens and functionalities. As a distinguishing factor,

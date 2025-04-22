@@ -9,6 +9,7 @@ import {
   GithubLogoWhite,
   RocketseatLogo,
   LinkedinLogo,
+  GmailLogo,
 } from "../_components/common/icons";
 import Link from "next/link";
 
@@ -64,9 +65,6 @@ export default function Institutional() {
             <Link href="#WhoWeAre">Who we are</Link>
           </li>
           <li>
-            <Link href="#Portfolio">Portfolio</Link>
-          </li>
-          <li>
             <Link href="#ContactMe">Contact me</Link>
           </li>
         </ul>
@@ -92,14 +90,15 @@ export default function Institutional() {
           style={{
             borderRadius: "100%",
           }}
-          className="mt-[32px] mb-[25px]"
+          className="mt-8 mb-8"
         />
-        <h2>About me</h2>
-        <p className="mt-[18px] mb-4 text-justify hyphens-auto">
-          My name is João Morais, and I’m a Brazilian Software Engineer. I’ve
-          been working with development for over 4 years. Since 2016, I’ve been
-          studying and striving to discover my best version both as a
-          professional and as a person.
+        <p className=" mb-4 font-light text-justify hyphens-auto">
+          &nbsp;&nbsp;With 4+ years of experience in website development, I have
+          worked on medium and large-scale products, focusing on performance
+          optimization, usability, and accessibility. Additionally, I have been
+          actively involved in creating and implementing new features, always
+          adhering to industry standards and seeking innovation efficiently,
+          basing decisions on test results and metric analysis.
         </p>
         <div className="flex justify-center flex-col md:flex-row">
           <Image
@@ -111,16 +110,22 @@ export default function Institutional() {
             className="mt-2 md:mt-0 mx-auto md:mr-auto h-[282px] lg:max-h-[282px]"
           />
           <div>
-            <p className="mt-6 md:mt-0 md:ml-[24px] mb-[24px] hyphens-auto">
-              I have Associate’s Degree since 2018 and I got my first job as
-              Software Developer in 2020. Since then, I’ve been conquering for
-              experience with various technologies, but having my core skills
-              with JavaScript based technologies like ReactJS, NextJS and VueJS.
+            <p className="mt-6 md:mt-0 md:ml-[24px] mb-[24px] font-light hyphens-auto">
+              &nbsp;&nbsp;I have solid expertise in JavaScript technologies,
+              with proficiency in frameworks and libraries such as ReactJS,
+              NextJS, and VueJS. I have applied these tools to develop various
+              products, including catalogs, real-time chats, ERP and CRM
+              systems, landing pages, and institutional websites. On the
+              backend, I have experience building APIs and other services using
+              PHP and Node.js, with libraries like ExpressJS and NestJS
             </p>
             <div className="flex justify-center flex-col md:flex-row">
-              <p className="md:mx-[24px] hyphens-auto">
-                We are humans, not code or machines. Humanized work is
-                important. “I am because we are”.
+              <p className="md:mx-[24px] font-light hyphens-auto">
+                &nbsp;&nbsp;I am continuously expanding my knowledge by working
+                on study projects, where I am responsible for prototyping and
+                implementing screens and functionalities. As a distinguishing
+                factor, I leverage Figma for UI/UX tasks and React Native for
+                mobile development.
               </p>
               <Image
                 alt="Mountains"
@@ -135,32 +140,19 @@ export default function Institutional() {
         </div>
       </section>
       <section
-        id="Portfolio"
-        className="flex flex-col items-center content-center mt-[128px]"
-      >
-        <h1 className="font-bold text-[26px]">Portfolio</h1>
-        <div className="flex items-end">
-          <p className=" max-w-[282px] text-center text-[16px] mt-[20px]">
-            Dude, this is my portfolio!{" "}
-          </p>
-          <p className="text-[12px] mb-[1px] ml-[6px] opacity-[0.4]">
-            For now...
-          </p>
-        </div>
-        <p className="max-w-[222px] text-center text-[16px]">Enjoy it.</p>
-      </section>
-      <section
         id="ContactMe"
-        className="px-4 flex flex-col items-center content-center mt-[128px] w-full"
+        className="px-4 flex flex-col items-center content-center mt-8 w-full"
       >
         <h1 className="font-bold text-[26px]">Contact me</h1>
-        <div className="mr-auto mt-[32px]">
-          <p className="text-[20px]">João Morais</p>
-          <p>vitormorais52@gmail.com</p>
-        </div>
-        <div className="mr-auto mt-6">
-          <p className="text-[20px]">Links</p>
+        <div className="mx-auto mt-[32px]">
           <div className="flex flex-wrap gap-6 mt-1">
+            <Link
+              className="flex gap-[8px]"
+              aria-label="email"
+              href="mailto:vitormorais52@gmail.com"
+            >
+              <GmailLogo classes="w-[25px] h-[25px]" /> vitormorais52@gmail.com
+            </Link>
             <Link
               href="https://www.linkedin.com/in/joaovitormorais/"
               target="_blank"
