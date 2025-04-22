@@ -101,13 +101,29 @@ export default function Home() {
 
       <section id="about-me" className="w-full mt-[86px] px-4">
         <h2 className="text-center">About me</h2>
-        <p className="mt-2 font-extralight text-center">
-          My name is João Morais, I’m a Brazilian Software Engineer and I’ve
-          been working with development for over 4 years.
+        <p className="mt-2 font-extralight text-left">
+          &nbsp;&nbsp; With 4+ years of experience in website development, I
+          have worked on medium and large-scale products, focusing on
+          performance optimization, usability, and accessibility. Additionally,
+          I have been actively involved in creating and implementing new
+          features, always adhering to industry standards and seeking innovation
+          efficiently, basing decisions on test results and metric analysis.
         </p>
-        <p className="font-extralight text-center">
-          I believe that a good work environment is based on good and clear
-          communication. Technical skills alone are not enough.
+        <p className="mt-2 font-extralight text-left">
+          &nbsp;&nbsp; I have solid expertise in JavaScript technologies, with
+          proficiency in frameworks and libraries such as ReactJS, NextJS, and
+          VueJS. I have applied these tools to develop various products,
+          including catalogs, real-time chats, ERP and CRM systems, landing
+          pages, and institutional websites. On the backend, I have experience
+          building APIs and other services using PHP and Node.js, with libraries
+          like ExpressJS and NestJS.
+        </p>
+        <p className="mt-2 font-extralight text-left">
+          &nbsp;&nbsp; I am continuously expanding my knowledge by working on
+          study projects, where I am responsible for prototyping and
+          implementing screens and functionalities. As a distinguishing factor,
+          I leverage Figma for UI/UX tasks and React Native for mobile
+          development.
         </p>
       </section>
     </main>
