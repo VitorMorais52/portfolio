@@ -63,7 +63,7 @@ export default function Modal({ post, toggleModal }: ModalProps) {
         aria-describedby="radix-:r1dv:"
         aria-labelledby="radix-:r1du:"
         data-state={state}
-        className="pointer-events-auto data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out bg-[#161616] fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-50 grid gap-4 bg-background p-6 shadow-lg sm:rounded-lg w-[90%] sm:max-w-[425px] w-full max-w-lg"
+        className="pointer-events-auto data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out bg-[#161616] fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-50 grid gap-4 bg-background p-6 shadow-lg rounded-lg w-[90%] md:w-full max-w-lg max-h-[80%] md:max-h[620px] overflow-auto"
         tabIndex={-1}
       >
         <div className="flex flex-col space-y-1.5 sm:text-left h-fit">

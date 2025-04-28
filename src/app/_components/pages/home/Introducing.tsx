@@ -53,7 +53,7 @@ export default function Introducing() {
         Who are you?
       </span>
       <div
-        className={`absolute flex transition-transform duration-300 ease-in-out ${
+        className={`absolute w-full flex transition-transform duration-300 ease-in-out ${
           isHovered ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
         }`}
       >
