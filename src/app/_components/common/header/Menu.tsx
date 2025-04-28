@@ -54,7 +54,7 @@ const Menu = ({ pagesName }: MenuProps) => {
       <div
         ref={menuRef}
         id="menu"
-        className={`z-10 h-screen fixed pt-1 2xl:pt-16 flex flex-col w-[240px] sm:w-[300px] h-[100vh] bg-black top-0 right-[-16px] transform translate-x-full opacity-0 transition-all duration-500 ease-in-out`}
+        className={`z-[11] h-screen fixed pt-1 2xl:pt-16 flex flex-col w-[240px] sm:w-[300px] h-[100vh] bg-black top-0 right-[-16px] transform translate-x-full opacity-0 transition-all duration-500 ease-in-out`}
       >
         <button
           className="w-fit flex mt-[44px] sm:mt-[92px] 2xl:mt-0 ml-4"
